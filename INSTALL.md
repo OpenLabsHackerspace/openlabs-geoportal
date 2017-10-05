@@ -43,5 +43,11 @@ It should display :
     
 ## Configure Apache
 
-   sudo a2enmod cgid
-   sudo service apache2 restart
+    sudo a2enmod cgid
+    sudo service apache2 restart
+    
+    sudo ln -s /usr/local/bin/mapserv /usr/lib/cgi-bin/mapserv
+    
+    sudo cp ./mapserver/mapserver.conf /etc/apache2/conf-available/mapserver.conf
+    sudo a2enconf mapserver
+    sudo service apache2 restart
