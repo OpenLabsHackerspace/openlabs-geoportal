@@ -1,0 +1,23 @@
+MAP
+    NAME "tirana"
+    STATUS ON
+    SIZE 256 256
+    IMAGECOLOR 255 255 255
+
+    WEB
+        IMAGEPATH "/ms4w/tmp/ms_tmp/"
+        IMAGEURL "/ms_tmp/"
+    END # WEB
+
+    LAYER
+        NAME "streets"
+        DATA ../data/Rruge_Akse_Tirana_31012017
+        TYPE LINE
+        STATUS DEFAULT
+        PROJECTION
+            "init=epsg:"
+        END
+        CLASS
+        END # CLASS
+    END # LAYER
+END # MAP
