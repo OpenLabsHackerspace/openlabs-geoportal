@@ -46,7 +46,19 @@ MAP
                 OPACITY 30
                 WIDTH 5.0
             END # STYLE
+            LABEL
+                COLOR  150 150 150
+                OUTLINECOLOR 255 255 255
+                FONT "sans"
+                TYPE truetype
+                SIZE 6
+                ANGLE AUTO
+                POSITION AUTO
+                PARTIALS FALSE
+            END # LABEL
         END # CLASS
+        DUMP TRUE
+        TEMPLATE "dummy.html"
     END # LAYER
 
     LAYER
@@ -70,5 +82,7 @@ MAP
                 WIDTH 1.0
             END # STYLE
         END # CLASS
+        DUMP TRUE
+        TEMPLATE "dummy.html"
     END # LAYER
 END # MAP
