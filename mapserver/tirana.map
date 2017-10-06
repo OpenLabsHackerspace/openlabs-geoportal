@@ -43,7 +43,8 @@ MAP
         CLASS
             STYLE
                 COLOR 0 0 255
-                WIDTH 3.0
+                OPACITY 30
+                WIDTH 5.0
             END # STYLE
         END # CLASS
     END # LAYER
@@ -64,6 +65,7 @@ MAP
         CLASS
             STYLE
                 COLOR 0 255 0
+                OPACITY 30
                 OUTLINECOLOR 0 80 0
                 WIDTH 1.0
             END # STYLE
