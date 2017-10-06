@@ -29,10 +29,10 @@
 
 ## Install required librairies
 
-    sudo apt-get install build-essential cmake \
+    sudo apt-get install cmake \
       libpng++-dev libfreetype6-dev libjpeg-dev \
       libproj-dev libcurl4-gnutls-dev \
-      libgeos-dev libxml2-dev libpq-dev libgif-dev libfcgi-dev libfribidi-dev libharfbuzz-dev \
+      libgeos-dev libxml2-dev libgif-dev libfcgi-dev libfribidi-dev libharfbuzz-dev \
       libcairo2-dev
 
 ## Download MapServer
