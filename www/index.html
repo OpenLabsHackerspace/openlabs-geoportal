@@ -28,7 +28,7 @@
     <div id="map" class="map">
       <select id="baselayers" autocomplete="off">
         <option value="0">OpenStreetMap</option>
-        <option value="1">ASIG OrthoPhoto 2015</option>
+        <!--<option value="1">ASIG OrthoPhoto 2015</option>-->
       </select>
     </div>
     <script>
@@ -56,13 +56,13 @@
       var baselayers = [
         new ol.layer.Tile({
           source: new ol.source.OSM()
-        }),
+        })/*,
         new ol.layer.Tile({
           source: new ol.source.XYZ({
             attributions: '© <a href="https://geoportal.asig.gov.al/" target="_blank">ASIG</a>',
             url: 'https://geoportal.asig.gov.al/service/wmts?layer=orthophoto_2015:OrthoImagery&style=default&tilematrixset=EPSG:6870&Service=WMTS&Request=GetTile&Version=1.0.0&Format=image/jpeg&TileMatrix=EPSG:6870:{z}&TileCol={x}&TileRow={y}'
           })
-        })
+        })*/
       ];
       
       var map = new ol.Map({
