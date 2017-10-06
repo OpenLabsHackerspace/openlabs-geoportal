@@ -21,6 +21,22 @@
   <body>
     <div id="map" class="map"></div>
     <script>
+      var zoom = 13;
+      var center = ol.proj.fromLonLat([19.8156, 41.3314]);
+
+      if (window.location.hash !== '') {
+        // try to restore center, zoom-level and rotation from the URL
+        var hash = window.location.hash.replace('#map=', '');
+        var parts = hash.split('/');
+        if (parts.length === 3) {
+          zoom = parseInt(parts[0], 10);
+          center = ol.proj.fromLonLat([
+            parseFloat(parts[1]),
+            parseFloat(parts[2])
+          ]);
+        }
+      }
+
       var attribution = new ol.control.Attribution({
         collapsible: false
       });
@@ -38,14 +54,49 @@
           })
         })
       ];
+      
       var map = new ol.Map({
         controls: ol.control.defaults({attribution: false}).extend([attribution, scaleLineControl]),
         layers: layers,
         target: 'map',
         view: new ol.View({
-          center: ol.proj.fromLonLat([19.8156, 41.3314]),
-          zoom: 13
+          center: center,
+          zoom: zoom
         })
+      });
+
+      var shouldUpdate = true;
+      var view = map.getView();
+      var updatePermalink = function() {
+        if (!shouldUpdate) {
+          // do not update the URL when the view was changed in the 'popstate' handler
+          shouldUpdate = true;
+          return;
+        }
+
+        var center = view.getCenter();
+        var hash = '#map=' +
+            view.getZoom() + '/' +
+            Math.round(center[0] * 1000000) / 1000000 + '/' +
+            Math.round(center[1] * 1000000) / 1000000;
+        var state = {
+          zoom: view.getZoom(),
+          center: view.getCenter()
+        };
+        window.history.pushState(state, 'map', hash);
+      };
+
+      map.on('moveend', updatePermalink);
+
+      // restore the view state when navigating through the history, see
+      // https://developer.mozilla.org/en-US/docs/Web/API/WindowEventHandlers/onpopstate
+      window.addEventListener('popstate', function(event) {
+        if (event.state === null) {
+          return;
+        }
+        map.getView().setCenter(ol.proj.fromLonLat(event.state.center));
+        map.getView().setZoom(event.state.zoom);
+        shouldUpdate = false;
       });
     </script>
   </body>
