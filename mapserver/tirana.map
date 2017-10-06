@@ -3,6 +3,7 @@ MAP
     STATUS ON
     SIZE 256 256
     IMAGECOLOR 255 255 255
+    FONTSET "/usr/lib/cgi-bin/fonts.txt"
 
     WEB
         METADATA
