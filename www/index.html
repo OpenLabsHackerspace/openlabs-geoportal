@@ -30,10 +30,10 @@
         var parts = hash.split('/');
         if (parts.length === 3) {
           zoom = parseInt(parts[0], 10);
-          center = ol.proj.fromLonLat([
+          center = [
             parseFloat(parts[1]),
             parseFloat(parts[2])
-          ]);
+          ];
         }
       }
 
@@ -60,7 +60,7 @@
         layers: layers,
         target: 'map',
         view: new ol.View({
-          center: center,
+          center: ol.proj.fromLonLat(center),
           zoom: zoom
         })
       });
