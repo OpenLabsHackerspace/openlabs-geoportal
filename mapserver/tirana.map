@@ -5,9 +5,27 @@ MAP
     IMAGECOLOR 255 255 255
 
     WEB
-        IMAGEPATH "/ms4w/tmp/ms_tmp/"
-        IMAGEURL "/ms_tmp/"
-    END # WEB
+        METADATA
+        "wms_encoding" "UTF-8"
+        "wms_title" "Municipality of Tirana"
+        "wms_abstract" ""
+        "wms_enable_request" "*"
+        "wms_srs" "EPSG:4326 EPSG:3857"
+        "wms_feature_info_mime_type" "text/plain application/vnd.ogc.gml"
+        END
+    END
+
+    LEGEND
+        LABEL
+            FONT "DejaVuSans"
+            TYPE truetype
+            SIZE 8.0
+        END
+    END
+
+    PROJECTION
+        "init=epsg:4326"
+    END
 
     LAYER
         NAME "streets"
@@ -15,9 +33,40 @@ MAP
         TYPE LINE
         STATUS DEFAULT
         PROJECTION
-            "init=epsg:"
+            "init=epsg:32634"
+        END
+        METADATA
+            "wms_title" "Streets"
+            "wms_enable_request" "*"
+            "wms_include_items" "all"
         END
         CLASS
+            STYLE
+                COLOR 0 0 255
+                WIDTH 3.0
+            END # STYLE
+        END # CLASS
+    END # LAYER
+
+    LAYER
+        NAME "buildings"
+        DATA ../data/NDERTESA_2017
+        TYPE POLYGON
+        STATUS DEFAULT
+        PROJECTION
+            "init=epsg:32634"
+        END
+        METADATA
+            "wms_title" "Buildings"
+            "wms_enable_request" "*"
+            "wms_include_items" "all"
+        END
+        CLASS
+            STYLE
+                COLOR 0 255 0
+                OUTLINECOLOR 0 80 0
+                WIDTH 1.0
+            END # STYLE
         END # CLASS
     END # LAYER
 END # MAP
