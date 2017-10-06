@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Tiled WMS</title>
+    <link rel="stylesheet" href="https://openlayers.org/en/v4.4.1/css/ol.css" type="text/css">
+    <script src="https://openlayers.org/en/v4.4.1/build/ol.js"></script>
+  </head>
+  <body>
+    <div id="map" class="map"></div>
+    <script>
+      var layers = [
+        new ol.layer.Tile({
+          source: new ol.source.OSM()
+        }),
+        new ol.layer.Tile({
+          extent: [-13884991, 2870341, -7455066, 6338219],
+          source: new ol.source.TileWMS({
+            url: 'http://149.202.183.195/cgi-bin/mapserv?map=/home/ubuntu/openlabs-geoportal/mapserver/tirana.map',
+            params: {'LAYERS': 'streets,buildings'},
+            serverType: 'mapserver'
+          })
+        })
+      ];
+      var map = new ol.Map({
+        layers: layers,
+        target: 'map',
+        view: new ol.View({
+          center: ol.proj.fromLonLat([19.8156, 41.3314]),
+          zoom: 13
+        })
+      });
+    </script>
+  </body>
+</html>
