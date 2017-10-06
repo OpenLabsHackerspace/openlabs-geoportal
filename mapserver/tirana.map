@@ -31,7 +31,7 @@ MAP
         NAME "streets"
         DATA ../data/Rruge_Akse_Tirana_31012017
         TYPE LINE
-        STATUS DEFAULT
+        STATUS OFF
         PROJECTION
             "init=epsg:32634"
         END
@@ -53,7 +53,7 @@ MAP
         NAME "buildings"
         DATA ../data/NDERTESA_2017
         TYPE POLYGON
-        STATUS DEFAULT
+        STATUS OFF
         PROJECTION
             "init=epsg:32634"
         END
