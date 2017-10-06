@@ -72,6 +72,7 @@ It should display :
     sudo service apache2 restart
     
     sudo ln -s /usr/local/bin/mapserv /usr/lib/cgi-bin/mapserv
+    sudo ln -s ~/openlabs-geoportal/mapserver/fonts.txt /usr/lib/cgi-bin/fonts.txt
     
     sudo cp ./mapserver/mapserver.conf /etc/apache2/conf-available/mapserver.conf
     sudo a2enconf mapserver
