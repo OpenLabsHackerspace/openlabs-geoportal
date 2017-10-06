@@ -48,9 +48,9 @@ MAP
                 WIDTH 5.0
             END # STYLE
             LABEL
-                COLOR  150 150 150
+                COLOR  0 0 255
                 OUTLINECOLOR 255 255 255
-                FONT "sans"
+                FONT "DejaVuSans"
                 TYPE truetype
                 SIZE 6
                 ANGLE AUTO
