@@ -45,6 +45,7 @@ MAP
         CLASS
             STYLE
                 COLOR 0 0 255
+                LINEJOIN NONE
                 OPACITY 30
                 WIDTH 5.0
             END # STYLE
