@@ -52,22 +52,30 @@
       });
       var scaleLineControl = new ol.control.ScaleLine();
       
-      var layers = [
+      var baselayers = [
         new ol.layer.Tile({
           source: new ol.source.OSM()
         }),
         new ol.layer.Tile({
-          source: new ol.source.TileWMS({
-            url: 'http://149.202.183.195/cgi-bin/mapserv?map=/home/ubuntu/openlabs-geoportal/mapserver/tirana.map',
-            params: {'LAYERS': 'streets,buildings'},
-            serverType: 'mapserver'
+          source: new ol.source.XYZ({
+            attributions: '© <a href="https://geoportal.asig.gov.al/" target="_blank">ASIG</a>'
+            url: 'https://geoportal.asig.gov.al/service/wmts?layer=orthophoto_2015:OrthoImagery&style=default&tilematrixset=EPSG:6870&Service=WMTS&Request=GetTile&Version=1.0.0&Format=image/jpeg&TileMatrix=EPSG:6870:{z}&TileCol={x}&TileRow={y}',
           })
         })
       ];
       
       var map = new ol.Map({
         controls: ol.control.defaults({attribution: false}).extend([attribution, scaleLineControl]),
-        layers: layers,
+        layers: [
+          baselayers[0],
+          new ol.layer.Tile({
+            source: new ol.source.TileWMS({
+              url: 'http://149.202.183.195/cgi-bin/mapserv?map=/home/ubuntu/openlabs-geoportal/mapserver/tirana.map',
+              params: {'LAYERS': 'streets,buildings'},
+              serverType: 'mapserver'
+            })
+          })
+        ],
         target: 'map',
         view: new ol.View({
           center: ol.proj.fromLonLat(center),
@@ -108,6 +116,10 @@
         map.getView().setZoom(event.state.zoom);
         shouldUpdate = false;
       });
+
+      document.getElementById("baselayers").onchange = function() {
+        map.getLayers().setAt(0, baselayers[this.value]);
+      };
     </script>
   </body>
 </html>
