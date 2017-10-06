@@ -40,6 +40,7 @@ MAP
             "wms_enable_request" "*"
             "wms_include_items" "all"
         END
+        LABELITEM "EMRI"
         CLASS
             STYLE
                 COLOR 0 0 255
