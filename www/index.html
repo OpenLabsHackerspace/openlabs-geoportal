@@ -13,13 +13,23 @@
       #map {
         height: 100%;
       }
+      #baselayers {
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        z-index: 999;
+      }
       .ol-control button, .ol-attribution, .ol-scale-line-inner {
         font-family: 'Lucida Grande',Verdana,Geneva,Lucida,Arial,Helvetica,sans-serif;
       }
     </style>
   </head>
   <body>
-    <div id="map" class="map"></div>
+    <div id="map" class="map">
+      <select id="baselayers" autocomplete="off">
+        <option value="0">OpenStreetMap</option>
+      </select>
+    </div>
     <script>
       var zoom = 13;
       var center = [19.8156, 41.3314];
