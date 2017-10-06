@@ -4,10 +4,28 @@
     <title>Municipality of Tirana</title>
     <link rel="stylesheet" href="https://openlayers.org/en/v4.4.1/css/ol.css" type="text/css">
     <script src="https://openlayers.org/en/v4.4.1/build/ol.js"></script>
+    <style>
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+      #map {
+        height: 100%;
+      }
+      .ol-control button, .ol-attribution, .ol-scale-line-inner {
+        font-family: 'Lucida Grande',Verdana,Geneva,Lucida,Arial,Helvetica,sans-serif;
+      }
+    </style>
   </head>
   <body>
     <div id="map" class="map"></div>
     <script>
+      var attribution = new ol.control.Attribution({
+        collapsible: false
+      });
+      var scaleLineControl = new ol.control.ScaleLine();
+      
       var layers = [
         new ol.layer.Tile({
           source: new ol.source.OSM()
@@ -21,6 +39,7 @@
         })
       ];
       var map = new ol.Map({
+        controls: ol.control.defaults({attribution: false}).extend([attribution, scaleLineControl]),
         layers: layers,
         target: 'map',
         view: new ol.View({
