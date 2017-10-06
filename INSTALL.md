@@ -1,3 +1,28 @@
+# GDAL library
+
+## Install required librairies
+
+    sudo apt-get install build-essential libpq-dev
+
+## Download GDAL
+
+    wget http://download.osgeo.org/gdal/CURRENT/gdal-2.2.2.tar.gz
+    tar -zxvf gdal-2.2.2.tar.gz
+    cd gdal-2.2.2.tar.gz
+    
+## Build GDAL
+
+    ./configure --with-pg
+    make
+    
+## Install GDAL
+
+    sudo make install
+    
+## Test
+
+    gdalinfo --version
+
 # MapServer
 
 <http://mapserver.org/installation/unix.html>
