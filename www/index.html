@@ -70,10 +70,14 @@
         layers: [
           baselayers[0],
           new ol.layer.Tile({
-            source: new ol.source.TileWMS({
+            /*source: new ol.source.TileWMS({
               url: 'http://149.202.183.195/cgi-bin/mapserv?map=/home/ubuntu/openlabs-geoportal/mapserver/tirana.map',
               params: {'LAYERS': 'streets,buildings'},
               serverType: 'mapserver'
+            })*/
+            source: new ol.source.XYZ({
+              attributions: '© Municipality of Tirana',
+              url: '/mapcache/tms/1.0.0/tirana@GoogleMapsCompatible/{z}/{x}/{y}.png'
             })
           })
         ],
