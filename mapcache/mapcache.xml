@@ -20,6 +20,12 @@
          </params>
       </getmap>
       
+      <getfeatureinfo>
+         <params>
+            <QUERY_LAYERS>streets,buildings</QUERY_LAYERS>
+         </params>
+      </getfeatureinfo>
+      
       <http>
          <url>http://localhost/cgi-bin/mapserv</url>
       </http>
