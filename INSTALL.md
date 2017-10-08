@@ -107,3 +107,10 @@ It should display :
 ## Install MapCache
 
     sudo make install
+
+## Install MapCache Apache module
+
+    sudo cp ./mapcache/mapcache.conf /etc/apache2/mods-available/mapcache.conf
+    sudo cp ./mapcache/mapcache.load /etc/apache2/mods-available/mapcache.load
+    sudo a2enmod mapcache
+    sudo service apache2 restart
