@@ -10,18 +10,6 @@
       <detect_blank/>
    </cache>
 
-   <source name="vmap0" type="wms">
-      <getmap>
-         <params>
-            <FORMAT>image/png</FORMAT>
-            <LAYERS>basic</LAYERS>
-         </params>
-      </getmap>
-      
-      <http>
-         <url>http://vmap0.tiles.osgeo.org/wms/vmap0</url>
-      </http>
-   </source>
    <source name="tirana" type="wms">
       <getmap>
          <params>
@@ -36,16 +24,6 @@
       </http>
    </source>
    
-   <tileset name="test">
-      <source>vmap0</source>
-      <cache>sqlite</cache>
-      <grid>WGS84</grid>
-      <grid>GoogleMapsCompatible</grid>
-      <format>PNG</format>
-      <metatile>5 5</metatile>
-      <metabuffer>10</metabuffer>
-      <expires>3600</expires>
-   </tileset>
    <tileset name="tirana">
       <source>tirana</source>
       <cache>sqlite</cache>
