@@ -31,6 +31,7 @@ MAP
     LAYER
         NAME "streets"
         DATA ../data/Rruge_Akse_Tirana_31012017
+        ENCODING "LATIN1"
         TYPE LINE
         STATUS OFF
         PROJECTION
