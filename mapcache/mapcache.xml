@@ -21,6 +21,7 @@
       </getmap>
       
       <getfeatureinfo>
+         <info_formats>text/plain</info_formats>
          <params>
             <QUERY_LAYERS>streets,buildings</QUERY_LAYERS>
          </params>
