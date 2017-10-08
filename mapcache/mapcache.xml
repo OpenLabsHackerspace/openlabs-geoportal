@@ -16,6 +16,7 @@
             <MAP>/home/ubuntu/openlabs-geoportal/mapserver/tirana.map</MAP>
             <FORMAT>image/png</FORMAT>
             <LAYERS>streets,buildings</LAYERS>
+            <TRANSPARENT>true</TRANSPARENT>
          </params>
       </getmap>
       
