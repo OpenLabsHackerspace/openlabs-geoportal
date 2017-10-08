@@ -8,7 +8,7 @@
 
     wget http://download.osgeo.org/gdal/CURRENT/gdal-2.2.2.tar.gz
     tar -zxvf gdal-2.2.2.tar.gz
-    cd gdal-2.2.2.tar.gz
+    cd gdal-2.2.2
     
 ## Build GDAL
 
@@ -22,6 +22,10 @@
 ## Test
 
     gdalinfo --version
+    
+It should display :
+    
+    GDAL 2.2.2, released 2017/09/15
 
 # MapServer
 
