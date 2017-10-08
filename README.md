@@ -16,7 +16,7 @@ This GeoPortal displays the data from the Municipality of Tirana.
 | Shape_Leng | | *489.347958771* |
 | Shape_Area | | *4352.91150748* |
 
-### Rruge Akse Tirana (2017-01-37) (*streets*)
+### Rruge Akse Tirana (2017-01-31) (*streets*)
 
 | Name       |             | *Example*            |
 |------------|-------------|----------------------|
