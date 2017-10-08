@@ -63,7 +63,7 @@ It should display :
 It should display :
 
     MapServer version 7.0.6 OUTPUT=PNG OUTPUT=JPEG SUPPORTS=PROJ SUPPORTS=AGG SUPPORTS=FREETYPE SUPPORTS=CAIRO SUPPORTS=ICONV SUPPORTS=FRIBIDI SUPPORTS=WMS_SERVER SUPPORTS=WMS_CLIENT SUPPORTS=WFS_SERVER SUPPORTS=WFS_CLIENT SUPPORTS=WCS_SERVER SUPPORTS=FASTCGI SUPPORTS=GEOS INPUT=JPEG INPUT=POSTGIS INPUT=OGR INPUT=GDAL INPUT=SHAPEFILE
-    
+
 # Apache
 
 ## Install Apache
@@ -81,3 +81,25 @@ It should display :
     sudo cp ./mapserver/mapserver.conf /etc/apache2/conf-available/mapserver.conf
     sudo a2enconf mapserver
     sudo service apache2 restart
+
+# MapCache
+
+## Install required librairies
+
+    sudo apt-get install libaprutil1-dev libapr1-dev apache2-dev
+
+## Download MapCache
+
+    git clone git://github.com/mapserver/mapcache.git
+
+## Build MapCache
+
+    cd mapcache
+    mkdir build
+    cd build
+    cmake ..
+    make
+    
+## Install MapCache
+
+    sudo make install
