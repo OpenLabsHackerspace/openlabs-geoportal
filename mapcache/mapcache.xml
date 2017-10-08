@@ -22,6 +22,19 @@
          <url>http://vmap0.tiles.osgeo.org/wms/vmap0</url>
       </http>
    </source>
+   <source name="tirana" type="wms">
+      <getmap>
+         <params>
+            <MAP>/home/ubuntu/openlabs-geoportal/mapserver/tirana.map</MAP>
+            <FORMAT>image/png</FORMAT>
+            <LAYERS>streets,buildings</LAYERS>
+         </params>
+      </getmap>
+      
+      <http>
+         <url>http://localhost/cgi-bin/mapserv</url>
+      </http>
+   </source>
    
    <tileset name="test">
       <source>vmap0</source>
@@ -33,21 +46,31 @@
       <metabuffer>10</metabuffer>
       <expires>3600</expires>
    </tileset>
+   <tileset name="tirana">
+      <source>tirana</source>
+      <cache>sqlite</cache>
+      <grid>WGS84</grid>
+      <grid>GoogleMapsCompatible</grid>
+      <format>PNG</format>
+      <metatile>5 5</metatile>
+      <metabuffer>10</metabuffer>
+      <expires>3600</expires>
+   </tileset>
 
-   <default_format>JPEG</default_format>
+   <default_format>PNG</default_format>
 
    <service type="wms" enabled="true">
       <full_wms>assemble</full_wms>
       <resample_mode>bilinear</resample_mode>
-      <format>JPEG</format>
+      <format>PNG</format>
       <maxsize>4096</maxsize>
    </service>
    <service type="wmts" enabled="true"/>
    <service type="tms" enabled="true"/>
-   <service type="kml" enabled="true"/>
-   <service type="gmaps" enabled="true"/>
-   <service type="ve" enabled="true"/>
-   <service type="mapguide" enabled="true"/>
+   <!--<service type="kml" enabled="true"/>-->
+   <!--<service type="gmaps" enabled="true"/>-->
+   <!--<service type="ve" enabled="true"/>-->
+   <!--<service type="mapguide" enabled="true"/>-->
    <service type="demo" enabled="true"/>
 
    <errors>report</errors>
