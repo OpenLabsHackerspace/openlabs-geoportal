@@ -1,5 +1,7 @@
 # GDAL library
 
+<https://trac.osgeo.org/gdal/wiki/BuildingOnUnix>
+
 ## Install required librairies
 
     sudo apt-get install build-essential libpq-dev
@@ -83,6 +85,8 @@ It should display :
     sudo service apache2 restart
 
 # MapCache
+
+<http://mapserver.org/mapcache/install.html>
 
 ## Install required librairies
 
