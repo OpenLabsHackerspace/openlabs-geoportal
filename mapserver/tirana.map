@@ -7,7 +7,7 @@ MAP
 
     WEB
         METADATA
-        "wms_encoding" "UTF-8"
+        "wms_encoding" "ISO-8859-1"
         "wms_title" "Municipality of Tirana"
         "wms_abstract" ""
         "wms_enable_request" "*"
