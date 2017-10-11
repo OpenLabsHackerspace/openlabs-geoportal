@@ -45,6 +45,15 @@ See [INSTALL.md](INSTALL.md)
 #### WMS
 
     http://149.202.183.195/mapcache/
+    
+### iD Editor
+
+<https://www.openstreetmap.org/edit?editor=id>
+
+- Open *Background Settings* (shortcut: `B`)
+- Click on *Custom*
+- Paste `http://149.202.183.195/mapcache/tms/1.0.0/tirana@GoogleMapsCompatible/{z}/{x}/{-y}.png`    
+- Click on OK
 
 ### JOSM 
 
