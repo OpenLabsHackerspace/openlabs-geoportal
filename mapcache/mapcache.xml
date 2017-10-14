@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <mapcache>
+   <metadata>
+      <name>openlabs-geoportal</name>
+      <title>OpenLabs GeoPortal</title>
+   </metadata>
+
    <cache name="disk" type="disk">
       <base>/tmp</base>
       <symlink_blank/>
@@ -42,7 +47,7 @@
       <metabuffer>10</metabuffer>
       <expires>3600</expires>
       <metadata>
-         <title>Tirana Buildings & Streets</title>
+         <title>Tirana Buildings &amp; Streets</title>
       </metadata>
    </tileset>
 
@@ -53,9 +58,6 @@
       <resample_mode>bilinear</resample_mode>
       <format>PNG</format>
       <maxsize>4096</maxsize>
-      <metadata>
-         <title>OpenLabs GeoPortal</title>
-      </metadata>
    </service>
    <service type="wmts" enabled="true"/>
    <service type="tms" enabled="true"/>
