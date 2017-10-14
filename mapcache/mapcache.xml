@@ -2,8 +2,7 @@
 
 <mapcache>
    <metadata>
-      <name>openlabs-geoportal</name>
-      <title>OpenLabs GeoPortal</title>
+      <title>Municipality of Tirana</title>
    </metadata>
 
    <cache name="disk" type="disk">
@@ -47,7 +46,7 @@
       <metabuffer>10</metabuffer>
       <expires>3600</expires>
       <metadata>
-         <title>Tirana Buildings &amp; Streets</title>
+         <title>Buildings &amp; Streets</title>
       </metadata>
    </tileset>
 
