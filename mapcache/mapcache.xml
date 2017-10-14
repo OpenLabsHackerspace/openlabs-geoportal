@@ -41,6 +41,9 @@
       <metatile>5 5</metatile>
       <metabuffer>10</metabuffer>
       <expires>3600</expires>
+      <metadata>
+         <title>OpenLabs GeoPortal</title>
+      </metadata>
    </tileset>
 
    <default_format>PNG</default_format>
