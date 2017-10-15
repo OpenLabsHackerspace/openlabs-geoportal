@@ -30,7 +30,7 @@ This GeoPortal displays the data from the Municipality of Tirana.
 
 ## Demo
 
-http://149.202.183.195/map.html#map=15/19.825443/41.326593
+https://geoportal.openlabs.cc/#map=15/19.825443/41.326593
 
 ## Install
 
@@ -44,7 +44,7 @@ See [INSTALL.md](INSTALL.md)
 
 | Type | URL |
 |------|-----|
-| WMS  | http://149.202.183.195/mapcache/ |
+| WMS  | https://geoportal.openlabs.cc/mapcache/ |
     
 ### iD Editor
 
@@ -52,7 +52,7 @@ See [INSTALL.md](INSTALL.md)
 
 - Open *Background Settings* (shortcut: `B`)
 - Click on *Custom*
-- Paste `http://149.202.183.195/mapcache/tms/1.0.0/tirana@GoogleMapsCompatible/{z}/{x}/{-y}.png`    
+- Paste `https://geoportal.openlabs.cc/mapcache/tms/1.0.0/tirana@GoogleMapsCompatible/{z}/{x}/{-y}.png`    
 - Click on OK
 
 ### JOSM 
@@ -61,5 +61,5 @@ See [INSTALL.md](INSTALL.md)
 
 | Type | URL |
 |------|-----|
-| WMS  | http://149.202.183.195/mapcache/?FORMAT=image/png&VERSION=1.1.1&SERVICE=WMS&REQUEST=GetMap&LAYERS=tirana&STYLES=&SRS={proj}&WIDTH={width}&HEIGHT={height}&BBOX={bbox} |
-| TMS  | http://149.202.183.195/mapcache/tms/1.0.0/tirana@GoogleMapsCompatible/{z}/{x}/{-y}.png |
+| WMS  | https://geoportal.openlabs.cc/mapcache/?FORMAT=image/png&VERSION=1.1.1&SERVICE=WMS&REQUEST=GetMap&LAYERS=tirana&STYLES=&SRS={proj}&WIDTH={width}&HEIGHT={height}&BBOX={bbox} |
+| TMS  | https://geoportal.openlabs.cc/mapcache/tms/1.0.0/tirana@GoogleMapsCompatible/{z}/{x}/{-y}.png |
