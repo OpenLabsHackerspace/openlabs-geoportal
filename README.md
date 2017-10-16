@@ -59,7 +59,7 @@ See [INSTALL.md](INSTALL.md)
 
 <https://josm.openstreetmap.de/>
 
-| Type | URL |
-|------|-----|
-| WMS  | `https://geoportal.openlabs.cc/mapcache/?FORMAT=image/png&VERSION=1.1.1&SERVICE=WMS&REQUEST=GetMap&LAYERS=tirana&STYLES=&SRS={proj}&WIDTH={width}&HEIGHT={height}&BBOX={bbox}` |
+| Type | URL                                                                                             |
+|------|-------------------------------------------------------------------------------------------------|
+| WMS  | `https://geoportal.openlabs.cc/mapcache/`                                                       |
 | TMS  | `https://geoportal.openlabs.cc/mapcache/tms/1.0.0/tirana@GoogleMapsCompatible/{z}/{x}/{-y}.png` |
