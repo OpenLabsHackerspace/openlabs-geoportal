@@ -44,7 +44,7 @@ See [INSTALL.md](INSTALL.md)
 
 | Type | URL |
 |------|-----|
-| WMS  | https://geoportal.openlabs.cc/mapcache/ |
+| WMS  | `https://geoportal.openlabs.cc/mapcache/` |
     
 ### iD Editor
 
@@ -61,5 +61,5 @@ See [INSTALL.md](INSTALL.md)
 
 | Type | URL |
 |------|-----|
-| WMS  | https://geoportal.openlabs.cc/mapcache/?FORMAT=image/png&VERSION=1.1.1&SERVICE=WMS&REQUEST=GetMap&LAYERS=tirana&STYLES=&SRS={proj}&WIDTH={width}&HEIGHT={height}&BBOX={bbox} |
-| TMS  | https://geoportal.openlabs.cc/mapcache/tms/1.0.0/tirana@GoogleMapsCompatible/{z}/{x}/{-y}.png |
+| WMS  | `https://geoportal.openlabs.cc/mapcache/?FORMAT=image/png&VERSION=1.1.1&SERVICE=WMS&REQUEST=GetMap&LAYERS=tirana&STYLES=&SRS={proj}&WIDTH={width}&HEIGHT={height}&BBOX={bbox}` |
+| TMS  | `https://geoportal.openlabs.cc/mapcache/tms/1.0.0/tirana@GoogleMapsCompatible/{z}/{x}/{-y}.png` |
