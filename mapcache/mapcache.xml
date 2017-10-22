@@ -31,12 +31,6 @@
       </params>
     </getfeatureinfo>
     
-    <getlegendgraphic>
-      <params>
-        <LAYER>streets</LAYER>
-      </params>
-    </getlegendgraphic>
-
     <http>
       <url>http://localhost/cgi-bin/mapserv</url>
     </http>
