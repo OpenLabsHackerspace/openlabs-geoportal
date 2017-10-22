@@ -54,7 +54,7 @@ MAP
             STYLE
                 COLOR 0 0 255
                 OPACITY 30
-                WIDTH 3.0
+                WIDTH 5.0
             END # STYLE
             LABEL
                 COLOR 0 0 255
@@ -73,7 +73,7 @@ MAP
             STYLE
                 COLOR 0 0 255
                 OPACITY 30
-                WIDTH 5.0
+                WIDTH 7.0
             END # STYLE
             LABEL
                 COLOR 0 0 255
@@ -111,7 +111,7 @@ MAP
             STYLE
                 COLOR 3 40 86
                 OPACITY 30
-                WIDTH 5.0
+                WIDTH 3.0
             END # STYLE
             LABEL
                 COLOR 3 40 86
@@ -130,7 +130,7 @@ MAP
             STYLE
                 COLOR 0 0 255
                 OPACITY 30
-                WIDTH 3.0
+                WIDTH 5.0
             END # STYLE
             LABEL
                 COLOR 0 0 255
@@ -149,7 +149,7 @@ MAP
             STYLE
                 COLOR 0 0 255
                 OPACITY 30
-                WIDTH 5.0
+                WIDTH 7.0
             END # STYLE
             LABEL
                 COLOR 0 0 255
@@ -167,7 +167,7 @@ MAP
             STYLE
                 COLOR 157 163 154
                 OPACITY 30
-                WIDTH 5.0
+                WIDTH 3.0
             END # STYLE
             LABEL
                 COLOR 157 163 154
