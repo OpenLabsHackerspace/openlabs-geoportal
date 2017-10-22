@@ -219,10 +219,10 @@ MAP
                 COLOR 0 80 0
                 FONT "DejaVuSans"
                 TYPE truetype
-                SIZE 4
+                SIZE 6
                 POSITION AUTO
                 PARTIALS FALSE
-                MAXSCALEDENOM 1000
+                MAXSCALEDENOM 2500
             END # LABEL
         END # CLASS
         DUMP TRUE
