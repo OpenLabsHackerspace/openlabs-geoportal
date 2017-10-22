@@ -216,12 +216,10 @@ MAP
             END # STYLE
             LABEL
                 TEXT '[Floors] floor(s)' 
-                COLOR 0 255 0
-                OUTLINECOLOR 255 255 255
+                COLOR 0 80 0
                 FONT "DejaVuSans"
                 TYPE truetype
-                SIZE 3
-                ANGLE AUTO
+                SIZE 4
                 POSITION AUTO
                 PARTIALS FALSE
                 MAXSCALEDENOM 1000
