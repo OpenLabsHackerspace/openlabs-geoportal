@@ -28,6 +28,8 @@ This GeoPortal displays the data from the Municipality of Tirana.
 | Shape_Leng |             | *140.12453194*       |
 | N_13042014 |             | *0*                  |
 
+![Streets legend](https://geoportal.openlabs.cc/cgi-bin/mapserv?map=/home/ubuntu/openlabs-geoportal/mapserver/tirana.map&version=1.3.0&service=WMS&request=GetLegendGraphic&sld_version=1.1.0&layer=streets&format=image/png&STYLE=default "Streets legend")
+
 ## Demo
 
 https://geoportal.openlabs.cc/#map=15/19.825443/41.326593
