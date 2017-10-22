@@ -39,8 +39,8 @@
    <tileset name="tirana">
       <source>tirana</source>
       <cache>sqlite</cache>
-      <grid>WGS84</grid>
-      <grid>GoogleMapsCompatible</grid>
+      <grid maxzoom="20">WGS84</grid>
+      <grid maxzoom="20">GoogleMapsCompatible</grid>
       <format>PNG</format>
       <metatile>5 5</metatile>
       <metabuffer>10</metabuffer>
