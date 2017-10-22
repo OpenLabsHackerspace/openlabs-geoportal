@@ -214,6 +214,18 @@ MAP
                 OUTLINECOLOR 0 80 0
                 WIDTH 1.0
             END # STYLE
+            LABEL
+                TEXT '[Floors] floor(s)' 
+                COLOR 0 255 0
+                OUTLINECOLOR 80 80 80
+                FONT "DejaVuSans"
+                TYPE truetype
+                SIZE 6
+                ANGLE AUTO
+                POSITION AUTO
+                PARTIALS FALSE
+                MAXSCALEDENOM 25000
+            END # LABEL
         END # CLASS
         DUMP TRUE
         TEMPLATE "dummy.html"
