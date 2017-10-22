@@ -65,6 +65,7 @@ MAP
                 ANGLE AUTO
                 POSITION AUTO
                 PARTIALS FALSE
+                MAXSCALEDENOM 100000
             END # LABEL
         END # CLASS
         CLASS
@@ -84,6 +85,7 @@ MAP
                 ANGLE AUTO
                 POSITION AUTO
                 PARTIALS FALSE
+                MAXSCALEDENOM 100000
             END # LABEL
         END # CLASS
         CLASS
@@ -103,6 +105,7 @@ MAP
                 ANGLE AUTO
                 POSITION AUTO
                 PARTIALS FALSE
+                MAXSCALEDENOM 25000
             END # LABEL
         END # CLASS
         CLASS
@@ -122,6 +125,7 @@ MAP
                 ANGLE AUTO
                 POSITION AUTO
                 PARTIALS FALSE
+                MAXSCALEDENOM 12500
             END # LABEL
         END # CLASS
         CLASS
@@ -141,6 +145,7 @@ MAP
                 ANGLE AUTO
                 POSITION AUTO
                 PARTIALS FALSE
+                MAXSCALEDENOM 100000
             END # LABEL
         END # CLASS
         CLASS
@@ -160,6 +165,7 @@ MAP
                 ANGLE AUTO
                 POSITION AUTO
                 PARTIALS FALSE
+                MAXSCALEDENOM 100000
             END # LABEL
         END # CLASS
         CLASS
@@ -178,6 +184,7 @@ MAP
                 ANGLE AUTO
                 POSITION AUTO
                 PARTIALS FALSE
+                MAXSCALEDENOM 12500
             END # LABEL
         END # CLASS
         DUMP TRUE
