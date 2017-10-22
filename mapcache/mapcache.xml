@@ -1,75 +1,70 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <mapcache>
-   <metadata>
-      <title>Municipality of Tirana</title>
-   </metadata>
+  <metadata>
+    <title>Municipality of Tirana</title>
+  </metadata>
 
-   <cache name="disk" type="disk">
-      <base>/home/ubuntu/openlabs-geoportal/mapcache/cache</base>
-      <symlink_blank/>
-   </cache>
-   <cache name="sqlite" type="sqlite3">
-     <dbfile>/home/ubuntu/openlabs-geoportal/mapcache/cache/{tileset}-{z}-{grid}.db</dbfile>
-      <detect_blank/>
-   </cache>
+  <cache name="disk" type="disk">
+    <base>/home/ubuntu/openlabs-geoportal/mapcache/cache</base>
+    <symlink_blank/>
+  </cache>
+  <cache name="sqlite" type="sqlite3">
+    <dbfile>/home/ubuntu/openlabs-geoportal/mapcache/cache/{tileset}-{z}-{grid}.db</dbfile>
+    <detect_blank/>
+  </cache>
 
-   <source name="tirana" type="wms">
-      <getmap>
-         <params>
-            <MAP>/home/ubuntu/openlabs-geoportal/mapserver/tirana.map</MAP>
-            <FORMAT>image/png</FORMAT>
-            <LAYERS>streets,buildings</LAYERS>
-            <TRANSPARENT>true</TRANSPARENT>
-         </params>
-      </getmap>
-      
-      <getfeatureinfo>
-         <info_formats>text/plain,application/vnd.ogc.gml</info_formats>
-         <params>
-            <QUERY_LAYERS>streets,buildings</QUERY_LAYERS>
-         </params>
-      </getfeatureinfo>
-      
-      <http>
-         <url>http://localhost/cgi-bin/mapserv</url>
-      </http>
-   </source>
-   
-   <tileset name="tirana">
-      <source>tirana</source>
-      <cache>sqlite</cache>
-      <grid>WGS84</grid>
-      <grid>GoogleMapsCompatible</grid>
-      <format>PNG</format>
-      <metatile>5 5</metatile>
-      <metabuffer>10</metabuffer>
-      <expires>3600</expires>
-      <metadata>
-         <title>Buildings &amp; Streets</title>
-      </metadata>
-   </tileset>
+  <source name="tirana" type="wms">
+    <getmap>
+      <params>
+        <MAP>/home/ubuntu/openlabs-geoportal/mapserver/tirana.map</MAP>
+        <FORMAT>image/png</FORMAT>
+        <LAYERS>streets,buildings</LAYERS>
+        <TRANSPARENT>true</TRANSPARENT>
+      </params>
+    </getmap>
 
-   <default_format>PNG</default_format>
+    <getfeatureinfo>
+      <info_formats>text/plain,application/vnd.ogc.gml</info_formats>
+      <params>
+        <QUERY_LAYERS>streets,buildings</QUERY_LAYERS>
+      </params>
+    </getfeatureinfo>
 
-   <service type="wms" enabled="true">
-      <full_wms>assemble</full_wms>
-      <resample_mode>bilinear</resample_mode>
-      <format>PNG</format>
-      <maxsize>4096</maxsize>
-   </service>
-   <service type="wmts" enabled="true"/>
-   <service type="tms" enabled="true"/>
-   <!--<service type="kml" enabled="true"/>-->
-   <!--<service type="gmaps" enabled="true"/>-->
-   <!--<service type="ve" enabled="true"/>-->
-   <!--<service type="mapguide" enabled="true"/>-->
-   <service type="demo" enabled="true"/>
+    <http>
+      <url>http://localhost/cgi-bin/mapserv</url>
+    </http>
+  </source>
 
-   <errors>report</errors>
-   <locker type="disk">
-     <directory>/home/ubuntu/openlabs-geoportal/mapcache/cache</directory>
-     <timeout>300</timeout>
-    </locker>
+  <tileset name="tirana">
+    <source>tirana</source>
+    <cache>sqlite</cache>
+    <grid>WGS84</grid>
+    <grid>GoogleMapsCompatible</grid>
+    <format>PNG</format>
+    <metatile>5 5</metatile>
+    <metabuffer>10</metabuffer>
+    <expires>3600</expires>
+    <metadata>
+      <title>Buildings &amp; Streets</title>
+    </metadata>
+  </tileset>
 
+  <default_format>PNG</default_format>
+
+  <service type="wms" enabled="true">
+    <full_wms>assemble</full_wms>
+    <resample_mode>bilinear</resample_mode>
+    <format>PNG</format>
+    <maxsize>4096</maxsize>
+  </service>
+  <service type="demo" enabled="true"/>
+  <service type="wmts" enabled="true"/>
+  <service type="tms" enabled="true"/>
+
+  <errors>report</errors>
+  <locker type="disk">
+    <directory>/home/ubuntu/openlabs-geoportal/mapcache/cache</directory>
+    <timeout>300</timeout>
+  </locker>
 </mapcache>
