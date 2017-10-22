@@ -217,14 +217,14 @@ MAP
             LABEL
                 TEXT '[Floors] floor(s)' 
                 COLOR 0 255 0
-                OUTLINECOLOR 80 80 80
+                OUTLINECOLOR 255 255 255
                 FONT "DejaVuSans"
                 TYPE truetype
-                SIZE 6
+                SIZE 3
                 ANGLE AUTO
                 POSITION AUTO
                 PARTIALS FALSE
-                MAXSCALEDENOM 25000
+                MAXSCALEDENOM 1000
             END # LABEL
         END # CLASS
         DUMP TRUE
