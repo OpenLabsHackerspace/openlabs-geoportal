@@ -61,6 +61,9 @@ See [INSTALL.md](INSTALL.md)
 
 <https://josm.openstreetmap.de/>
 
+The layer is available in the default "Imagery preferences" as "[*Municipality of Tirana (Open Labs GeoPortal)*](https://josm.openstreetmap.de/wiki/Maps/Albania)" !  
+More information on how to enable it : <https://josm.openstreetmap.de/wiki/Help/Preferences/Imagery> !
+
 | Type | URL                                                                                             |
 |------|-------------------------------------------------------------------------------------------------|
 | WMS  | `https://geoportal.openlabs.cc/mapcache/`                                                       |
