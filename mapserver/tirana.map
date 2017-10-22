@@ -207,6 +207,7 @@ MAP
             "ows_geometries" "msGeometry"
             "ows_mygeom_type" "polygon"
         END
+        MAXSCALEDENOM 80000
         CLASS
             STYLE
                 COLOR 0 255 0
