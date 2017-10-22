@@ -6,11 +6,11 @@
    </metadata>
 
    <cache name="disk" type="disk">
-      <base>/tmp</base>
+      <base>/home/ubuntu/openlabs-geoportal/mapcache/cache</base>
       <symlink_blank/>
    </cache>
    <cache name="sqlite" type="sqlite3">
-     <dbfile>/tmp/{tileset}-{z}-{grid}.db</dbfile>
+     <dbfile>/home/ubuntu/openlabs-geoportal/mapcache/cache/{tileset}-{z}-{grid}.db</dbfile>
       <detect_blank/>
    </cache>
 
@@ -68,7 +68,7 @@
 
    <errors>report</errors>
    <locker type="disk">
-     <directory>/tmp</directory>
+     <directory>/home/ubuntu/openlabs-geoportal/mapcache/cache</directory>
      <timeout>300</timeout>
     </locker>
 
