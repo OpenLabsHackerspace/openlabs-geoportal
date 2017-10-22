@@ -47,14 +47,130 @@ MAP
             "ows_mygeom_type" "line"
         END
         LABELITEM "EMRI"
+        CLASSITEM "Kategoria"
         CLASS
+            NAME "INTERURBANE DYTESORE"
+            EXPRESSION "INTERURBANE DYTESORE"
+            STYLE
+                COLOR 0 0 255
+                OPACITY 30
+                WIDTH 3.0
+            END # STYLE
+            LABEL
+                COLOR 0 0 255
+                OUTLINECOLOR 255 255 255
+                FONT "DejaVuSans"
+                TYPE truetype
+                SIZE 6
+                ANGLE AUTO
+                POSITION AUTO
+                PARTIALS FALSE
+            END # LABEL
+        END # CLASS
+        CLASS
+            NAME "INTERURBANE KRYESORE"
+            EXPRESSION "INTERURBANE KRYESORE"
             STYLE
                 COLOR 0 0 255
                 OPACITY 30
                 WIDTH 5.0
             END # STYLE
             LABEL
-                COLOR  0 0 255
+                COLOR 0 0 255
+                OUTLINECOLOR 255 255 255
+                FONT "DejaVuSans"
+                TYPE truetype
+                SIZE 6
+                ANGLE AUTO
+                POSITION AUTO
+                PARTIALS FALSE
+            END # LABEL
+        END # CLASS
+        CLASS
+            NAME "LOKALE"
+            EXPRESSION /LOKALE/i
+            STYLE
+                COLOR 7 87 186
+                OPACITY 30
+                WIDTH 3.0
+            END # STYLE
+            LABEL
+                COLOR 7 87 186
+                OUTLINECOLOR 255 255 255
+                FONT "DejaVuSans"
+                TYPE truetype
+                SIZE 6
+                ANGLE AUTO
+                POSITION AUTO
+                PARTIALS FALSE
+            END # LABEL
+        END # CLASS
+        CLASS
+            NAME "SEZONALE"
+            EXPRESSION "SEZONALE"
+            STYLE
+                COLOR 3 40 86
+                OPACITY 30
+                WIDTH 5.0
+            END # STYLE
+            LABEL
+                COLOR 3 40 86
+                OUTLINECOLOR 255 255 255
+                FONT "DejaVuSans"
+                TYPE truetype
+                SIZE 6
+                ANGLE AUTO
+                POSITION AUTO
+                PARTIALS FALSE
+            END # LABEL
+        END # CLASS
+        CLASS
+            NAME "URBANE DYTESORE"
+            EXPRESSION "URBANE DYTESORE"
+            STYLE
+                COLOR 0 0 255
+                OPACITY 30
+                WIDTH 3.0
+            END # STYLE
+            LABEL
+                COLOR 0 0 255
+                OUTLINECOLOR 255 255 255
+                FONT "DejaVuSans"
+                TYPE truetype
+                SIZE 6
+                ANGLE AUTO
+                POSITION AUTO
+                PARTIALS FALSE
+            END # LABEL
+        END # CLASS
+        CLASS
+            NAME "URBANE KRYESORE"
+            EXPRESSION "URBANE KRYESORE"
+            STYLE
+                COLOR 0 0 255
+                OPACITY 30
+                WIDTH 5.0
+            END # STYLE
+            LABEL
+                COLOR 0 0 255
+                OUTLINECOLOR 255 255 255
+                FONT "DejaVuSans"
+                TYPE truetype
+                SIZE 6
+                ANGLE AUTO
+                POSITION AUTO
+                PARTIALS FALSE
+            END # LABEL
+        END # CLASS
+        CLASS
+            NAME "-"
+            STYLE
+                COLOR 157 163 154
+                OPACITY 30
+                WIDTH 5.0
+            END # STYLE
+            LABEL
+                COLOR 157 163 154
                 OUTLINECOLOR 255 255 255
                 FONT "DejaVuSans"
                 TYPE truetype
