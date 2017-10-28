@@ -2,6 +2,8 @@
 <html>
   <head>
     <title>Municipality of Tirana</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/openlayers/4.4.2/ol.css" integrity="sha256-rQq4Fxpq3LlPQ8yP11i6Z2lAo82b6ACDgd35CKyNEBw=" crossorigin="anonymous">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
     <style>
@@ -9,9 +11,12 @@
       #map-right {
         height: 450px;
       }
-      .ol-control button,
-      .ol-attribution,
-      .ol-scale-line-inner {
+      .ol-attribution.ol-logo-only,
+      .ol-attribution.ol-uncollapsible {
+        max-width: calc(100% - 3em);
+        height: 1.5em;
+      }
+      .ol-control button, .ol-attribution, .ol-scale-line-inner {
         font-family: 'Lucida Grande',Verdana,Geneva,Lucida,Arial,Helvetica,sans-serif;
       }
     </style>
@@ -64,12 +69,6 @@
         layers: [
           new ol.layer.Tile({
             source: new ol.source.OSM()
-          }),
-          new ol.layer.Tile({
-            source: new ol.source.TileGrid({
-              projection: 'EPSG:3857',
-              tileGrid: (new ol.source.OSM()).getTileGrid()
-            })
           })
         ],
         target: 'map-left',
@@ -88,22 +87,14 @@
               attributions: '© Municipality of Tirana',
               url: '/mapcache/tms/1.0.0/tirana@GoogleMapsCompatible/{z}/{x}/{-y}.png'
             })
-          }),
-          new ol.layer.Tile({
-            source: new ol.source.TileGrid({
-              projection: 'EPSG:3857',
-              tileGrid: (new ol.source.OSM()).getTileGrid()
-            })
           })
         ],
-        target: 'map',
+        target: 'map-right',
         view: view
       });
 
-      var graticule = new ol.Graticule({
-      });
-      graticule.setMap(mapLeft);
-      graticule.setMap(mapRight);
+      (new ol.Graticule()).setMap(mapLeft);
+      (new ol.Graticule()).setMap(mapRight);
 
       var shouldUpdate = true;
       var view = mapLeft.getView();
