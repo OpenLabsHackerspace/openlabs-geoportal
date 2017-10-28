@@ -40,7 +40,7 @@
     <source>tirana</source>
     <cache>sqlite</cache>
     <grid>WGS84</grid>
-    <grid>GoogleMapsCompatible</grid>
+    <grid>GoogleMapsCompatibleExtended</grid>
     <format>PNG</format>
     <metatile>5 5</metatile>
     <metabuffer>10</metabuffer>
@@ -50,7 +50,7 @@
     </metadata>
   </tileset>
 
-  <grid name="GoogleMapsCompatible">
+  <grid name="GoogleMapsCompatibleExtended">
      <metadata>
         <title>GoogleMapsCompatible extended to Level 21</title>
         <WellKnownScaleSet>urn:ogc:def:wkss:OGC:1.0:GoogleMapsCompatible</WellKnownScaleSet>
