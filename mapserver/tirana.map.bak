@@ -2,7 +2,7 @@ MAP
     NAME "tirana"
     STATUS ON
     SIZE 256 256
-    IMAGECOLOR 242 239 233
+    IMAGECOLOR 255 255 255
     FONTSET "/usr/lib/cgi-bin/fonts.txt"
 
     WEB
@@ -52,81 +52,69 @@ MAP
             NAME "INTERURBANE DYTESORE"
             EXPRESSION "INTERURBANE DYTESORE"
             STYLE
-                COLOR 170 124 30
-                WIDTH 13.0
+                COLOR 0 0 255
+                OPACITY 30
+                WIDTH 5.0
             END # STYLE
-            STYLE
-                COLOR 252 214 164
-                WIDTH 10.0
-            END # STYLE
-            #LABEL
-            #    COLOR 0 0 255
-            #    OUTLINECOLOR 255 255 255
-            #    FONT "DejaVuSans"
-            #    TYPE truetype
-            #    SIZE 6
-            #    ANGLE AUTO
-            #    POSITION AUTO
-            #    PARTIALS FALSE
-            #    MAXSCALEDENOM 100000
-            #END # LABEL
+            LABEL
+                COLOR 0 0 255
+                OUTLINECOLOR 255 255 255
+                FONT "DejaVuSans"
+                TYPE truetype
+                SIZE 6
+                ANGLE AUTO
+                POSITION AUTO
+                PARTIALS FALSE
+                MAXSCALEDENOM 100000
+            END # LABEL
         END # CLASS
         CLASS
             NAME "INTERURBANE KRYESORE"
             EXPRESSION "INTERURBANE KRYESORE"
             STYLE
-                COLOR 170 124 30
-                WIDTH 13.0
+                COLOR 0 0 255
+                OPACITY 30
+                WIDTH 7.0
             END # STYLE
-            STYLE
-                COLOR 252 214 164
-                WIDTH 10.0
-            END # STYLE
-            #LABEL
-            #    COLOR 0 0 255
-            #    OUTLINECOLOR 255 255 255
-            #    FONT "DejaVuSans"
-            #    TYPE truetype
-            #    SIZE 6
-            #    ANGLE AUTO
-            #    POSITION AUTO
-            #    PARTIALS FALSE
-            #    MAXSCALEDENOM 100000
-            #END # LABEL
+            LABEL
+                COLOR 0 0 255
+                OUTLINECOLOR 255 255 255
+                FONT "DejaVuSans"
+                TYPE truetype
+                SIZE 6
+                ANGLE AUTO
+                POSITION AUTO
+                PARTIALS FALSE
+                MAXSCALEDENOM 100000
+            END # LABEL
         END # CLASS
         CLASS
             NAME "LOKALE"
             EXPRESSION /LOKALE/i
             STYLE
-                COLOR 200 200 200
-                WIDTH 8.0
+                COLOR 7 87 186
+                OPACITY 30
+                WIDTH 3.0
             END # STYLE
-            STYLE
-                COLOR 255 255 255
-                WIDTH 5.0
-            END # STYLE
-            #LABEL
-            #    COLOR 7 87 186
-            #    OUTLINECOLOR 255 255 255
-            #    FONT "DejaVuSans"
-            #    TYPE truetype
-            #    SIZE 6
-            #    ANGLE AUTO
-            #    POSITION AUTO
-            #    PARTIALS FALSE
-            #    MAXSCALEDENOM 50000
-            #END # LABEL
+            LABEL
+                COLOR 7 87 186
+                OUTLINECOLOR 255 255 255
+                FONT "DejaVuSans"
+                TYPE truetype
+                SIZE 6
+                ANGLE AUTO
+                POSITION AUTO
+                PARTIALS FALSE
+                MAXSCALEDENOM 50000
+            END # LABEL
         END # CLASS
         CLASS
             NAME "SEZONALE"
             EXPRESSION "SEZONALE"
             STYLE
-                COLOR 195 195 195
-                WIDTH 8.0
-            END # STYLE
-            STYLE
-                COLOR 237 237 237
-                WIDTH 5.0
+                COLOR 3 40 86
+                OPACITY 30
+                WIDTH 3.0
             END # STYLE
             LABEL
                 COLOR 3 40 86
@@ -144,66 +132,60 @@ MAP
             NAME "URBANE DYTESORE"
             EXPRESSION "URBANE DYTESORE"
             STYLE
-                COLOR 170 124 30
-                WIDTH 13.0
+                COLOR 0 0 255
+                OPACITY 30
+                WIDTH 5.0
             END # STYLE
-            STYLE
-                COLOR 252 214 164
-                WIDTH 10.0
-            END # STYLE
-            #LABEL
-            #    COLOR 0 0 255
-            #    OUTLINECOLOR 255 255 255
-            #    FONT "DejaVuSans"
-            #    TYPE truetype
-            #    SIZE 6
-            #    ANGLE AUTO
-            #    POSITION AUTO
-            #    PARTIALS FALSE
-            #    MAXSCALEDENOM 100000
-            #END # LABEL
+            LABEL
+                COLOR 0 0 255
+                OUTLINECOLOR 255 255 255
+                FONT "DejaVuSans"
+                TYPE truetype
+                SIZE 6
+                ANGLE AUTO
+                POSITION AUTO
+                PARTIALS FALSE
+                MAXSCALEDENOM 100000
+            END # LABEL
         END # CLASS
         CLASS
             NAME "URBANE KRYESORE"
             EXPRESSION "URBANE KRYESORE"
             STYLE
-                COLOR 170 124 30
-                WIDTH 13.0
+                COLOR 0 0 255
+                OPACITY 30
+                WIDTH 7.0
             END # STYLE
-            STYLE
-                COLOR 252 214 164
-                WIDTH 10.0
-            END # STYLE
-            #LABEL
-            #    COLOR 0 0 255
-            #    OUTLINECOLOR 255 255 255
-            #    FONT "DejaVuSans"
-            #    TYPE truetype
-            #    SIZE 6
-            #    ANGLE AUTO
-            #    POSITION AUTO
-            #    PARTIALS FALSE
-            #    MAXSCALEDENOM 100000
-            #END # LABEL
+            LABEL
+                COLOR 0 0 255
+                OUTLINECOLOR 255 255 255
+                FONT "DejaVuSans"
+                TYPE truetype
+                SIZE 6
+                ANGLE AUTO
+                POSITION AUTO
+                PARTIALS FALSE
+                MAXSCALEDENOM 100000
+            END # LABEL
         END # CLASS
         CLASS
             NAME "-"
             STYLE
-                COLOR 250 128 114
-                PATTERN 10 10 END
+                COLOR 157 163 154
+                OPACITY 30
                 WIDTH 3.0
             END # STYLE
-            #LABEL
-            #    COLOR 157 163 154
-            #    OUTLINECOLOR 255 255 255
-            #    FONT "DejaVuSans"
-            #    TYPE truetype
-            #    SIZE 6
-            #    ANGLE AUTO
-            #    POSITION AUTO
-            #    PARTIALS FALSE
-            #    MAXSCALEDENOM 25000
-            #END # LABEL
+            LABEL
+                COLOR 157 163 154
+                OUTLINECOLOR 255 255 255
+                FONT "DejaVuSans"
+                TYPE truetype
+                SIZE 6
+                ANGLE AUTO
+                POSITION AUTO
+                PARTIALS FALSE
+                MAXSCALEDENOM 25000
+            END # LABEL
         END # CLASS
         DUMP TRUE
         TEMPLATE "dummy.html"
@@ -228,12 +210,13 @@ MAP
         MAXSCALEDENOM 80000
         CLASS
             STYLE
-                COLOR 217 208 201
-                OUTLINECOLOR 194 180 169
+                COLOR 0 255 0
+                OPACITY 30
+                OUTLINECOLOR 0 80 0
                 WIDTH 1.0
             END # STYLE
             LABEL
-                TEXT '[Floors] floor(s)'
+                TEXT '[Floors] floor(s)' 
                 COLOR 0 80 0
                 FONT "DejaVuSans"
                 TYPE truetype
