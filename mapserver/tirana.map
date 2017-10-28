@@ -112,7 +112,7 @@ MAP
                 ANGLE FOLLOW
                 POSITION CC
                 PARTIALS FALSE
-                MAXSCALEDENOM 50000
+                MAXSCALEDENOM 25000
             END # LABEL
         END # CLASS
         CLASS
@@ -135,7 +135,7 @@ MAP
                 ANGLE FOLLOW
                 POSITION CC
                 PARTIALS FALSE
-                MAXSCALEDENOM 50000
+                MAXSCALEDENOM 25000
             END # LABEL
         END # CLASS
         CLASS
@@ -189,17 +189,17 @@ MAP
                 PATTERN 10 10 END
                 WIDTH 1.0
             END # STYLE
-            #LABEL
-            #    COLOR 157 163 154
-            #    OUTLINECOLOR 255 255 255
-            #    FONT "DejaVuSans"
-            #    TYPE truetype
-            #    SIZE 6
-            #    ANGLE AUTO
-            #    POSITION AUTO
-            #    PARTIALS FALSE
-            #    MAXSCALEDENOM 25000
-            #END # LABEL
+            LABEL
+                COLOR 0 0 0
+                OUTLINECOLOR 255 255 255
+                FONT "DejaVuSans"
+                TYPE truetype
+                SIZE 6
+                ANGLE FOLLOW
+                POSITION CC
+                PARTIALS FALSE
+                MAXSCALEDENOM 25000
+            END # LABEL
         END # CLASS
         DUMP TRUE
         TEMPLATE "dummy.html"
