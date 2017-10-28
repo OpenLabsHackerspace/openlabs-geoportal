@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Municipality of Tirana</title>
+    <link rel="stylesheet" href="https://openlayers.org/en/v4.4.1/css/ol.css" type="text/css">
+    <script src="https://openlayers.org/en/v4.4.1/build/ol.js"></script>
+    <style>
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+      #map {
+        height: 100%;
+      }
+      #baselayers {
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        z-index: 999;
+      }
+      .ol-control button, .ol-attribution, .ol-scale-line-inner {
+        font-family: 'Lucida Grande',Verdana,Geneva,Lucida,Arial,Helvetica,sans-serif;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="map" class="map">
+      <select id="baselayers" autocomplete="off">
+        <option value="0">OpenStreetMap</option>
+        <!--<option value="1">ASIG OrthoPhoto 2015</option>-->
+      </select>
+    </div>
+    <script>
+      var zoom = 13;
+      var center = [19.8156, 41.3314];
+
+      if (window.location.hash !== '') {
+        // try to restore center, zoom-level and rotation from the URL
+        var hash = window.location.hash.replace('#map=', '');
+        var parts = hash.split('/');
+        if (parts.length === 3) {
+          zoom = parseInt(parts[0], 10);
+          center = [
+            parseFloat(parts[1]),
+            parseFloat(parts[2])
+          ];
+        }
+      }
+
+      var attribution = new ol.control.Attribution({
+        collapsible: false
+      });
+      var scaleLineControl = new ol.control.ScaleLine();
+      
+      var baselayers = [
+        new ol.layer.Tile({
+          source: new ol.source.OSM()
+        })/*,
+        new ol.layer.Tile({
+          source: new ol.source.XYZ({
+            attributions: '© <a href="https://geoportal.asig.gov.al/" target="_blank">ASIG</a>',
+            url: 'https://geoportal.asig.gov.al/service/wmts?layer=orthophoto_2015:OrthoImagery&style=default&tilematrixset=EPSG:6870&Service=WMTS&Request=GetTile&Version=1.0.0&Format=image/jpeg&TileMatrix=EPSG:6870:{z}&TileCol={x}&TileRow={y}'
+          })
+        })*/
+      ];
+      
+      var map = new ol.Map({
+        controls: ol.control.defaults({attribution: false}).extend([attribution, scaleLineControl]),
+        layers: [
+          baselayers[0],
+          new ol.layer.Tile({
+            /*source: new ol.source.TileWMS({
+              url: 'http://149.202.183.195/cgi-bin/mapserv?map=/home/ubuntu/openlabs-geoportal/mapserver/tirana.map',
+              params: {'LAYERS': 'streets,buildings'},
+              serverType: 'mapserver'
+            })*/
+            source: new ol.source.XYZ({
+              attributions: '© Municipality of Tirana',
+              url: '/mapcache/tms/1.0.0/tirana@GoogleMapsCompatible/{z}/{x}/{-y}.png'
+            })
+          })
+        ],
+        target: 'map',
+        view: new ol.View({
+          center: ol.proj.fromLonLat(center),
+          zoom: zoom
+        })
+      });
+
+      var shouldUpdate = true;
+      var view = map.getView();
+      var updatePermalink = function() {
+        if (!shouldUpdate) {
+          // do not update the URL when the view was changed in the 'popstate' handler
+          shouldUpdate = true;
+          return;
+        }
+
+        var center = ol.proj.toLonLat(view.getCenter());
+        var hash = '#map=' +
+            view.getZoom() + '/' +
+            Math.round(center[0] * 1000000) / 1000000 + '/' +
+            Math.round(center[1] * 1000000) / 1000000;
+        var state = {
+          zoom: view.getZoom(),
+          center: center
+        };
+        window.history.pushState(state, 'map', hash);
+      };
+
+      map.on('moveend', updatePermalink);
+
+      // restore the view state when navigating through the history, see
+      // https://developer.mozilla.org/en-US/docs/Web/API/WindowEventHandlers/onpopstate
+      window.addEventListener('popstate', function(event) {
+        if (event.state === null) {
+          return;
+        }
+        map.getView().setCenter(ol.proj.fromLonLat(event.state.center));
+        map.getView().setZoom(event.state.zoom);
+        shouldUpdate = false;
+      });
+
+      document.getElementById("baselayers").onchange = function() {
+        map.getLayers().setAt(0, baselayers[this.value]);
+      };
+    </script>
+  </body>
+</html>

@@ -2,41 +2,38 @@
 <html>
   <head>
     <title>Municipality of Tirana</title>
-    <link rel="stylesheet" href="https://openlayers.org/en/v4.4.1/css/ol.css" type="text/css">
-    <script src="https://openlayers.org/en/v4.4.1/build/ol.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/openlayers/4.4.2/ol.css" integrity="sha256-rQq4Fxpq3LlPQ8yP11i6Z2lAo82b6ACDgd35CKyNEBw=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
     <style>
-      html, body {
-        height: 100%;
-        margin: 0;
-        padding: 0;
+      #map-left,
+      #map-right {
+        height: 450px;
       }
-      #map {
-        height: 100%;
-      }
-      #baselayers {
-        position: absolute;
-        top: 15px;
-        right: 15px;
-        z-index: 999;
-      }
-      .ol-control button, .ol-attribution, .ol-scale-line-inner {
+      .ol-control button,
+      .ol-attribution,
+      .ol-scale-line-inner {
         font-family: 'Lucida Grande',Verdana,Geneva,Lucida,Arial,Helvetica,sans-serif;
       }
     </style>
   </head>
   <body>
-    <div id="map" class="map">
-      <select id="baselayers" autocomplete="off">
-        <option value="0">OpenStreetMap</option>
-        <!--<option value="1">ASIG OrthoPhoto 2015</option>-->
-      </select>
+    <div class="container-fluid">
+      <h1>Open Labs GeoPortal</h1>
+      <div class="row">
+        <div class="col-md">
+          <div id="map-left"></div>
+        </div>
+        <div class="col-md">
+          <div id="map-right"></div>
+        </div>
+      </div>
     </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/openlayers/4.4.2/ol.js" integrity="sha256-hq+a1sWxTrC7b+EcVjl5jjzblmb49Ups88E7KhTuGEU=" crossorigin="anonymous"></script>
     <script>
       var zoom = 13;
       var center = [19.8156, 41.3314];
 
       if (window.location.hash !== '') {
-        // try to restore center, zoom-level and rotation from the URL
         var hash = window.location.hash.replace('#map=', '');
         var parts = hash.split('/');
         if (parts.length === 3) {
@@ -48,27 +45,39 @@
         }
       }
 
-      var attribution = new ol.control.Attribution({
+      var view = new ol.View({
+        center: ol.proj.fromLonLat(center),
+        zoom: zoom
+      })
+
+      var attributionLeft = new ol.control.Attribution({
         collapsible: false
       });
-      var scaleLineControl = new ol.control.ScaleLine();
-      
-      var baselayers = [
-        new ol.layer.Tile({
-          source: new ol.source.OSM()
-        })/*,
-        new ol.layer.Tile({
-          source: new ol.source.XYZ({
-            attributions: '© <a href="https://geoportal.asig.gov.al/" target="_blank">ASIG</a>',
-            url: 'https://geoportal.asig.gov.al/service/wmts?layer=orthophoto_2015:OrthoImagery&style=default&tilematrixset=EPSG:6870&Service=WMTS&Request=GetTile&Version=1.0.0&Format=image/jpeg&TileMatrix=EPSG:6870:{z}&TileCol={x}&TileRow={y}'
-          })
-        })*/
-      ];
-      
-      var map = new ol.Map({
-        controls: ol.control.defaults({attribution: false}).extend([attribution, scaleLineControl]),
+      var attributionRight = new ol.control.Attribution({
+        collapsible: false
+      });
+      var scaleLineControlLeft = new ol.control.ScaleLine();
+      var scaleLineControlRight = new ol.control.ScaleLine();
+
+      var mapLeft = new ol.Map({
+        controls: ol.control.defaults({attribution: false}).extend([attributionLeft, scaleLineControlLeft]),
         layers: [
-          baselayers[0],
+          new ol.layer.Tile({
+            source: new ol.source.OSM()
+          }),
+          new ol.layer.Tile({
+            source: new ol.source.TileGrid({
+              projection: 'EPSG:3857',
+              tileGrid: (new ol.source.OSM()).getTileGrid()
+            })
+          })
+        ],
+        target: 'map-left',
+        view: view
+      });
+      var mapRight = new ol.Map({
+        controls: ol.control.defaults({attribution: false}).extend([attributionRight, scaleLineControlRight]),
+        layers: [
           new ol.layer.Tile({
             /*source: new ol.source.TileWMS({
               url: 'http://149.202.183.195/cgi-bin/mapserv?map=/home/ubuntu/openlabs-geoportal/mapserver/tirana.map',
@@ -79,20 +88,27 @@
               attributions: '© Municipality of Tirana',
               url: '/mapcache/tms/1.0.0/tirana@GoogleMapsCompatible/{z}/{x}/{-y}.png'
             })
+          }),
+          new ol.layer.Tile({
+            source: new ol.source.TileGrid({
+              projection: 'EPSG:3857',
+              tileGrid: (new ol.source.OSM()).getTileGrid()
+            })
           })
         ],
         target: 'map',
-        view: new ol.View({
-          center: ol.proj.fromLonLat(center),
-          zoom: zoom
-        })
+        view: view
       });
 
+      var graticule = new ol.Graticule({
+      });
+      graticule.setMap(mapLeft);
+      graticule.setMap(mapRight);
+
       var shouldUpdate = true;
-      var view = map.getView();
+      var view = mapLeft.getView();
       var updatePermalink = function() {
         if (!shouldUpdate) {
-          // do not update the URL when the view was changed in the 'popstate' handler
           shouldUpdate = true;
           return;
         }
@@ -109,22 +125,19 @@
         window.history.pushState(state, 'map', hash);
       };
 
-      map.on('moveend', updatePermalink);
+      mapLeft.on('moveend', updatePermalink);
+      mapRight.on('moveend', updatePermalink);
 
-      // restore the view state when navigating through the history, see
-      // https://developer.mozilla.org/en-US/docs/Web/API/WindowEventHandlers/onpopstate
       window.addEventListener('popstate', function(event) {
         if (event.state === null) {
           return;
         }
-        map.getView().setCenter(ol.proj.fromLonLat(event.state.center));
-        map.getView().setZoom(event.state.zoom);
+        mapLeft.getView().setCenter(ol.proj.fromLonLat(event.state.center));
+        mapLeft.getView().setZoom(event.state.zoom);
+        mapRight.getView().setCenter(ol.proj.fromLonLat(event.state.center));
+        mapRight.getView().setZoom(event.state.zoom);
         shouldUpdate = false;
       });
-
-      document.getElementById("baselayers").onchange = function() {
-        map.getLayers().setAt(0, baselayers[this.value]);
-      };
     </script>
   </body>
 </html>
