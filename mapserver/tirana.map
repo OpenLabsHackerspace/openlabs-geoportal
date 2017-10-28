@@ -59,17 +59,16 @@ MAP
                 COLOR 252 214 164
                 WIDTH 8.0
             END # STYLE
-            #LABEL
-            #    COLOR 0 0 255
-            #    OUTLINECOLOR 255 255 255
-            #    FONT "DejaVuSans"
-            #    TYPE truetype
-            #    SIZE 6
-            #    ANGLE AUTO
-            #    POSITION AUTO
-            #    PARTIALS FALSE
-            #    MAXSCALEDENOM 100000
-            #END # LABEL
+            LABEL
+                COLOR 0 0 0
+                FONT "DejaVuSans"
+                TYPE truetype
+                SIZE 6
+                ANGLE FOLLOW
+                POSITION CC
+                PARTIALS FALSE
+                MAXSCALEDENOM 100000
+            END # LABEL
         END # CLASS
         CLASS
             NAME "INTERURBANE KRYESORE"
@@ -82,17 +81,16 @@ MAP
                 COLOR 252 214 164
                 WIDTH 8.0
             END # STYLE
-            #LABEL
-            #    COLOR 0 0 255
-            #    OUTLINECOLOR 255 255 255
-            #    FONT "DejaVuSans"
-            #    TYPE truetype
-            #    SIZE 6
-            #    ANGLE AUTO
-            #    POSITION AUTO
-            #    PARTIALS FALSE
-            #    MAXSCALEDENOM 100000
-            #END # LABEL
+            LABEL
+                COLOR 0 0 0
+                FONT "DejaVuSans"
+                TYPE truetype
+                SIZE 6
+                ANGLE FOLLOW
+                POSITION CC
+                PARTIALS FALSE
+                MAXSCALEDENOM 100000
+            END # LABEL
         END # CLASS
         CLASS
             NAME "LOKALE"
@@ -105,17 +103,17 @@ MAP
                 COLOR 255 255 255
                 WIDTH 5.0
             END # STYLE
-            #LABEL
-            #    COLOR 7 87 186
-            #    OUTLINECOLOR 255 255 255
-            #    FONT "DejaVuSans"
-            #    TYPE truetype
-            #    SIZE 6
-            #    ANGLE AUTO
-            #    POSITION AUTO
-            #    PARTIALS FALSE
-            #    MAXSCALEDENOM 50000
-            #END # LABEL
+            LABEL
+                COLOR 0 0 0
+                OUTLINECOLOR 255 255 255
+                FONT "DejaVuSans"
+                TYPE truetype
+                SIZE 6
+                ANGLE FOLLOW
+                POSITION CC
+                PARTIALS FALSE
+                MAXSCALEDENOM 50000
+            END # LABEL
         END # CLASS
         CLASS
             NAME "SEZONALE"
@@ -128,17 +126,17 @@ MAP
                 COLOR 237 237 237
                 WIDTH 5.0
             END # STYLE
-            #LABEL
-            #    COLOR 3 40 86
-            #    OUTLINECOLOR 255 255 255
-            #    FONT "DejaVuSans"
-            #    TYPE truetype
-            #    SIZE 6
-            #    ANGLE AUTO
-            #    POSITION AUTO
-            #    PARTIALS FALSE
-            #    MAXSCALEDENOM 25000
-            #END # LABEL
+            LABEL
+                COLOR 0 0 0
+                OUTLINECOLOR 255 255 255
+                FONT "DejaVuSans"
+                TYPE truetype
+                SIZE 6
+                ANGLE FOLLOW
+                POSITION CC
+                PARTIALS FALSE
+                MAXSCALEDENOM 50000
+            END # LABEL
         END # CLASS
         CLASS
             NAME "URBANE DYTESORE"
@@ -151,17 +149,16 @@ MAP
                 COLOR 252 214 164
                 WIDTH 8.0
             END # STYLE
-            #LABEL
-            #    COLOR 0 0 255
-            #    OUTLINECOLOR 255 255 255
-            #    FONT "DejaVuSans"
-            #    TYPE truetype
-            #    SIZE 6
-            #    ANGLE AUTO
-            #    POSITION AUTO
-            #    PARTIALS FALSE
-            #    MAXSCALEDENOM 100000
-            #END # LABEL
+            LABEL
+                COLOR 0 0 0
+                FONT "DejaVuSans"
+                TYPE truetype
+                SIZE 6
+                ANGLE FOLLOW
+                POSITION CC
+                PARTIALS FALSE
+                MAXSCALEDENOM 100000
+            END # LABEL
         END # CLASS
         CLASS
             NAME "URBANE KRYESORE"
@@ -174,17 +171,16 @@ MAP
                 COLOR 252 214 164
                 WIDTH 8.0
             END # STYLE
-            #LABEL
-            #    COLOR 0 0 255
-            #    OUTLINECOLOR 255 255 255
-            #    FONT "DejaVuSans"
-            #    TYPE truetype
-            #    SIZE 6
-            #    ANGLE AUTO
-            #    POSITION AUTO
-            #    PARTIALS FALSE
-            #    MAXSCALEDENOM 100000
-            #END # LABEL
+            LABEL
+                COLOR 0 0 0
+                FONT "DejaVuSans"
+                TYPE truetype
+                SIZE 6
+                ANGLE FOLLOW
+                POSITION CC
+                PARTIALS FALSE
+                MAXSCALEDENOM 100000
+            END # LABEL
         END # CLASS
         CLASS
             NAME "-"
@@ -236,7 +232,7 @@ MAP
                 TEXT '[Floors] floor(s)'
                 COLOR 80 80 80
                 OUTLINECOLOR 255 255 255
-                FONT "DejaVuSans"
+                FONT "DejaVuSans-Bold"
                 TYPE truetype
                 SIZE 6
                 POSITION AUTO
