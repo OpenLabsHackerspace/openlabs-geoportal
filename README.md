@@ -1,4 +1,4 @@
-# OpenLabs GeoPortal 
+# OpenLabs GeoPortal
 
 This GeoPortal displays the data from the Municipality of Tirana.
 
@@ -47,17 +47,17 @@ See [INSTALL.md](INSTALL.md)
 | Type | URL |
 |------|-----|
 | WMS  | `https://geoportal.openlabs.cc/mapcache/` |
-    
+
 ### iD Editor
 
 <https://www.openstreetmap.org/edit?editor=id>
 
 - Open *Background Settings* (shortcut: `B`)
 - Click on *Custom*
-- Paste `https://geoportal.openlabs.cc/mapcache/tms/1.0.0/tirana@GoogleMapsCompatible/{z}/{x}/{-y}.png`    
+- Paste `https://geoportal.openlabs.cc/mapcache/tms/1.0.0/tirana@GoogleMapsCompatibleExtended/{z}/{x}/{-y}.png`    
 - Click on OK
 
-### JOSM 
+### JOSM
 
 <https://josm.openstreetmap.de/>
 
@@ -67,4 +67,4 @@ More information on how to enable it : <https://josm.openstreetmap.de/wiki/Help/
 | Type | URL                                                                                             |
 |------|-------------------------------------------------------------------------------------------------|
 | WMS  | `https://geoportal.openlabs.cc/mapcache/`                                                       |
-| TMS  | `https://geoportal.openlabs.cc/mapcache/tms/1.0.0/tirana@GoogleMapsCompatible/{z}/{x}/{-y}.png` |
+| TMS  | `https://geoportal.openlabs.cc/mapcache/tms/1.0.0/tirana@GoogleMapsCompatibleExtended/{z}/{x}/{-y}.png` |
