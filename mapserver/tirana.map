@@ -53,11 +53,11 @@ MAP
             EXPRESSION "INTERURBANE DYTESORE"
             STYLE
                 COLOR 170 124 30
-                WIDTH 13.0
+                WIDTH 11.0
             END # STYLE
             STYLE
                 COLOR 252 214 164
-                WIDTH 10.0
+                WIDTH 8.0
             END # STYLE
             #LABEL
             #    COLOR 0 0 255
@@ -76,11 +76,11 @@ MAP
             EXPRESSION "INTERURBANE KRYESORE"
             STYLE
                 COLOR 170 124 30
-                WIDTH 13.0
+                WIDTH 11.0
             END # STYLE
             STYLE
                 COLOR 252 214 164
-                WIDTH 10.0
+                WIDTH 8.0
             END # STYLE
             #LABEL
             #    COLOR 0 0 255
@@ -128,28 +128,28 @@ MAP
                 COLOR 237 237 237
                 WIDTH 5.0
             END # STYLE
-            LABEL
-                COLOR 3 40 86
-                OUTLINECOLOR 255 255 255
-                FONT "DejaVuSans"
-                TYPE truetype
-                SIZE 6
-                ANGLE AUTO
-                POSITION AUTO
-                PARTIALS FALSE
-                MAXSCALEDENOM 25000
-            END # LABEL
+            #LABEL
+            #    COLOR 3 40 86
+            #    OUTLINECOLOR 255 255 255
+            #    FONT "DejaVuSans"
+            #    TYPE truetype
+            #    SIZE 6
+            #    ANGLE AUTO
+            #    POSITION AUTO
+            #    PARTIALS FALSE
+            #    MAXSCALEDENOM 25000
+            #END # LABEL
         END # CLASS
         CLASS
             NAME "URBANE DYTESORE"
             EXPRESSION "URBANE DYTESORE"
             STYLE
                 COLOR 170 124 30
-                WIDTH 13.0
+                WIDTH 11.0
             END # STYLE
             STYLE
                 COLOR 252 214 164
-                WIDTH 10.0
+                WIDTH 8.0
             END # STYLE
             #LABEL
             #    COLOR 0 0 255
@@ -168,11 +168,11 @@ MAP
             EXPRESSION "URBANE KRYESORE"
             STYLE
                 COLOR 170 124 30
-                WIDTH 13.0
+                WIDTH 11.0
             END # STYLE
             STYLE
                 COLOR 252 214 164
-                WIDTH 10.0
+                WIDTH 8.0
             END # STYLE
             #LABEL
             #    COLOR 0 0 255
@@ -191,7 +191,7 @@ MAP
             STYLE
                 COLOR 250 128 114
                 PATTERN 10 10 END
-                WIDTH 3.0
+                WIDTH 1.0
             END # STYLE
             #LABEL
             #    COLOR 157 163 154

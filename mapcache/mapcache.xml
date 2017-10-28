@@ -20,7 +20,7 @@
         <MAP>/home/ubuntu/openlabs-geoportal/mapserver/tirana.map</MAP>
         <FORMAT>image/png</FORMAT>
         <LAYERS>streets,buildings</LAYERS>
-        <TRANSPARENT>true</TRANSPARENT>
+        <!--<TRANSPARENT>true</TRANSPARENT>-->
       </params>
     </getmap>
 
@@ -30,7 +30,7 @@
         <QUERY_LAYERS>streets,buildings</QUERY_LAYERS>
       </params>
     </getfeatureinfo>
-    
+
     <http>
       <url>http://localhost/cgi-bin/mapserv</url>
     </http>
