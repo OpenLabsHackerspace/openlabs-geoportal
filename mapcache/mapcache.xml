@@ -40,6 +40,7 @@
     <source>tirana</source>
     <cache>sqlite</cache>
     <grid>WGS84</grid>
+    <grid>GoogleMapsCompatible</grid>
     <grid>GoogleMapsCompatibleExtended</grid>
     <format>PNG</format>
     <metatile>5 5</metatile>
