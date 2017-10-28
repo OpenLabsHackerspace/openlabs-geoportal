@@ -234,7 +234,8 @@ MAP
             END # STYLE
             LABEL
                 TEXT '[Floors] floor(s)'
-                COLOR 0 80 0
+                COLOR 80 80 80
+                OUTLINECOLOR 255 255 255
                 FONT "DejaVuSans"
                 TYPE truetype
                 SIZE 6
