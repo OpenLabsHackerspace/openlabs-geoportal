@@ -90,7 +90,7 @@ It should display :
 
 ## Install required librairies
 
-    sudo apt-get install libaprutil1-dev libapr1-dev apache2-dev
+    sudo apt-get install libaprutil1-dev libapr1-dev apache2-dev libsqlite3-dev libarchive-dev
 
 ## Download MapCache
 
