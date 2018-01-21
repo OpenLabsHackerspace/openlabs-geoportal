@@ -80,7 +80,7 @@ It should display :
     sudo ln -s /usr/local/bin/mapserv /usr/lib/cgi-bin/mapserv
     sudo ln -s ~/openlabs-geoportal/mapserver/fonts.txt /usr/lib/cgi-bin/fonts.txt
     
-    sudo cp ./mapserver/mapserver.conf /etc/apache2/conf-available/mapserver.conf
+    sudo cp ~/openlabs-geoportal/mapserver/mapserver.conf /etc/apache2/conf-available/mapserver.conf
     sudo a2enconf mapserver
     sudo service apache2 restart
 
@@ -114,3 +114,5 @@ It should display :
     sudo cp ~/openlabs-geoportal/mapcache/mapcache.load /etc/apache2/mods-available/mapcache.load
     sudo a2enmod mapcache
     sudo service apache2 restart
+    
+You'll maybe need to fix the path defined in `/etc/apache2/mods-available/mapcache.conf`
