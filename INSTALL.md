@@ -111,6 +111,6 @@ It should display :
 ## Install MapCache Apache module
 
     sudo cp ~/openlabs-geoportal/mapcache/mapcache.conf /etc/apache2/mods-available/mapcache.conf
-    sudo cp ~/openlabs-geoportal/mapcache.load /etc/apache2/mods-available/mapcache.load
+    sudo cp ~/openlabs-geoportal/mapcache/mapcache.load /etc/apache2/mods-available/mapcache.load
     sudo a2enmod mapcache
     sudo service apache2 restart
