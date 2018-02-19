@@ -4,31 +4,10 @@ This GeoPortal displays the data from the Municipality of Tirana.
 
 ## Data
 
-### Ndertesa (2017) (*buildings*)
-
-| Name       | | *Example*       |
-|------------|-|-----------------|
-| OBJECTID   | | *18674*         |
-| AdmUnit    | | *TIRANA*        |
-| Floors     | | *4*             |
-| Nj_Adm     | |                 |
-| NrKat      | | *0*             |
-| Shape_Leng | | *489.347958771* |
-| Shape_Area | | *4352.91150748* |
-
-### Rruge Akse Tirana (2017-01-31) (*streets*)
-
-| Name       |             | *Example*            |
-|------------|-------------|----------------------|
-| EMRI       | Name        | *BLV. ZOGU 1*        |
-| KODI       | Code        | *200*                |
-| NJESIA     | Unit        | *Njesia Bashkiake 9* |
-| Kategoria  | Category    | *URBANE KRYESORE*    |
-| KODI_TEXT  | Code (text) | *200*                |
-| Shape_Leng |             | *140.12453194*       |
-| N_13042014 |             | *0*                  |
-
-![Streets legend](https://geoportal.openlabs.cc/cgi-bin/mapserv?map=/home/ubuntu/openlabs-geoportal/mapserver/tirana.map&version=1.3.0&service=WMS&request=GetLegendGraphic&sld_version=1.1.0&layer=streets&format=image/png&STYLE=default& "Streets legend")
+- Ndertesa (2017) (*buildings*)
+- Rruge Akse Tirana (2017-01-31) (*streets*)
+- Stacione & Linjat Qytetese 2018 (*public transport: stations + lines*)  
+:octocat: Source: [bashkiatirane/Harta-e-Transportit-Publik](https://github.com/bashkiatirane/Harta-e-Transportit-Publik/tree/master/Stacione%20%26%20Linjat%20Qytetese%202018)
 
 ## Demo
 
