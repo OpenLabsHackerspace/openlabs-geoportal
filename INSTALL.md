@@ -8,9 +8,9 @@
 
 ## Download GDAL
 
-    wget http://download.osgeo.org/gdal/CURRENT/gdal-2.2.2.tar.gz
-    tar -zxvf gdal-2.2.2.tar.gz
-    cd gdal-2.2.2
+    wget http://download.osgeo.org/gdal/CURRENT/gdal-2.2.3.tar.gz
+    tar -zxvf gdal-2.2.3.tar.gz
+    cd gdal-2.2.3
     
 ## Build GDAL
 
@@ -27,7 +27,7 @@
     
 It should display :
     
-    GDAL 2.2.2, released 2017/09/15
+    GDAL 2.2.3, released 2017/11/20
 
 # MapServer
 
