@@ -19,7 +19,7 @@
       <params>
         <MAP>/home/ubuntu/openlabs-geoportal/mapserver/tirana.map</MAP>
         <FORMAT>image/png</FORMAT>
-        <LAYERS>streets,buildings</LAYERS>
+        <LAYERS>streets_outside,streets,buildings,administrative_buildings,stops,lines</LAYERS>
         <!--<TRANSPARENT>true</TRANSPARENT>-->
       </params>
     </getmap>
@@ -27,7 +27,7 @@
     <getfeatureinfo>
       <info_formats>text/plain,application/vnd.ogc.gml</info_formats>
       <params>
-        <QUERY_LAYERS>streets,buildings</QUERY_LAYERS>
+        <QUERY_LAYERS>streets_outside,streets,buildings,administrative_buildings,stops,lines</QUERY_LAYERS>
       </params>
     </getfeatureinfo>
 
@@ -47,7 +47,7 @@
     <metabuffer>10</metabuffer>
     <expires>3600</expires>
     <metadata>
-      <title>Buildings &amp; Streets</title>
+      <title>Municipality of Tirana</title>
     </metadata>
   </tileset>
 

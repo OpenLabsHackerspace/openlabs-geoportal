@@ -1,0 +1,624 @@
+    LAYER
+        NAME "line_1"
+        GROUP "lines"
+        DATA "../data/Stacione & Linjat Qytetese 2018//Linja_1t"
+        ENCODING "LATIN1"
+        TYPE LINE
+        STATUS OFF
+        PROJECTION
+            "init=epsg:32634"
+        END
+        METADATA
+            "wms_title" "Line 1"
+            "wms_enable_request" "*"
+            "wms_include_items" "all"
+            "gml_include_items" "all"
+            "ows_geometries" "msGeometry"
+            "ows_mygeom_type" "line"
+        END
+        LABELITEM "EMERTIMI_L"
+        CLASS
+            STYLE
+                COLOR 108 77 144
+                OPACITY 75
+                WIDTH 3.0
+            END # STYLE
+            LABEL
+                COLOR 108 77 144
+                OUTLINECOLOR 255 255 255
+                FONT "DejaVuSans"
+                TYPE truetype
+                SIZE 6
+                ANGLE FOLLOW
+                POSITION CC
+                PARTIALS FALSE
+                MAXSCALEDENOM 50000
+            END # LABEL
+        END # CLASS
+    END # LAYER
+
+    LAYER
+        NAME "line_2"
+        GROUP "lines"
+        DATA "../data/Stacione & Linjat Qytetese 2018/Linja_2"
+        ENCODING "LATIN1"
+        TYPE LINE
+        STATUS OFF
+        PROJECTION
+            "init=epsg:32634"
+        END
+        METADATA
+            "wms_title" "Line 2"
+            "wms_enable_request" "*"
+            "wms_include_items" "all"
+            "gml_include_items" "all"
+            "ows_geometries" "msGeometry"
+            "ows_mygeom_type" "line"
+        END
+        LABELITEM "EMERTIMI_L"
+        CLASS
+            STYLE
+                COLOR 163 77 140
+                OPACITY 75
+                WIDTH 3.0
+            END # STYLE
+            LABEL
+                COLOR 163 77 140
+                OUTLINECOLOR 255 255 255
+                FONT "DejaVuSans"
+                TYPE truetype
+                SIZE 6
+                ANGLE FOLLOW
+                POSITION CC
+                PARTIALS FALSE
+                MAXSCALEDENOM 50000
+            END # LABEL
+        END # CLASS
+    END # LAYER
+
+    LAYER
+        NAME "line_3"
+        GROUP "lines"
+        DATA "../data/Stacione & Linjat Qytetese 2018/Linja_3"
+        ENCODING "LATIN1"
+        TYPE LINE
+        STATUS OFF
+        PROJECTION
+            "init=epsg:32634"
+        END
+        METADATA
+            "wms_title" "Line 3"
+            "wms_enable_request" "*"
+            "wms_include_items" "all"
+            "gml_include_items" "all"
+            "ows_geometries" "msGeometry"
+            "ows_mygeom_type" "line"
+        END
+        LABELITEM "DESCRIPTIO"
+        CLASS
+            STYLE
+                COLOR 176 166 128
+                OPACITY 75
+                WIDTH 3.0
+            END # STYLE
+            LABEL
+                COLOR 176 166 128
+                OUTLINECOLOR 255 255 255
+                FONT "DejaVuSans"
+                TYPE truetype
+                SIZE 6
+                ANGLE FOLLOW
+                POSITION CC
+                PARTIALS FALSE
+                MAXSCALEDENOM 50000
+            END # LABEL
+        END # CLASS
+    END # LAYER
+
+    LAYER
+        NAME "line_4"
+        GROUP "lines"
+        DATA "../data/Stacione & Linjat Qytetese 2018/Linja_4"
+        ENCODING "LATIN1"
+        TYPE LINE
+        STATUS OFF
+        PROJECTION
+            "init=epsg:32634"
+        END
+        METADATA
+            "wms_title" "Line 4"
+            "wms_enable_request" "*"
+            "wms_include_items" "all"
+            "gml_include_items" "all"
+            "ows_geometries" "msGeometry"
+            "ows_mygeom_type" "line"
+        END
+        LABELITEM "name"
+        CLASS
+            STYLE
+                COLOR 113 194 183
+                OPACITY 75
+                WIDTH 3.0
+            END # STYLE
+            LABEL
+                COLOR 113 194 183
+                OUTLINECOLOR 255 255 255
+                FONT "DejaVuSans"
+                TYPE truetype
+                SIZE 6
+                ANGLE FOLLOW
+                POSITION CC
+                PARTIALS FALSE
+                MAXSCALEDENOM 50000
+            END # LABEL
+        END # CLASS
+    END # LAYER
+
+    LAYER
+        NAME "line_5"
+        GROUP "lines"
+        DATA "../data/Stacione & Linjat Qytetese 2018/Linja_5"
+        ENCODING "LATIN1"
+        TYPE LINE
+        STATUS OFF
+        PROJECTION
+            "init=epsg:32634"
+        END
+        METADATA
+            "wms_title" "Line 5"
+            "wms_enable_request" "*"
+            "wms_include_items" "all"
+            "gml_include_items" "all"
+            "ows_geometries" "msGeometry"
+            "ows_mygeom_type" "line"
+        END
+        LABELITEM "DESCRIPTIO"
+        CLASS
+            STYLE
+                COLOR 199 126 133
+                OPACITY 75
+                WIDTH 3.0
+            END # STYLE
+            LABEL
+                COLOR 199 126 133
+                OUTLINECOLOR 255 255 255
+                FONT "DejaVuSans"
+                TYPE truetype
+                SIZE 6
+                ANGLE FOLLOW
+                POSITION CC
+                PARTIALS FALSE
+                MAXSCALEDENOM 50000
+            END # LABEL
+        END # CLASS
+    END # LAYER
+
+    LAYER
+        NAME "line_6"
+        GROUP "lines"
+        DATA "../data/Stacione & Linjat Qytetese 2018/Linja_6t"
+        ENCODING "LATIN1"
+        TYPE LINE
+        STATUS OFF
+        PROJECTION
+            "init=epsg:32634"
+        END
+        METADATA
+            "wms_title" "Line 6"
+            "wms_enable_request" "*"
+            "wms_include_items" "all"
+            "gml_include_items" "all"
+            "ows_geometries" "msGeometry"
+            "ows_mygeom_type" "line"
+        END
+        LABELITEM "DESCRIPTIO"
+        CLASS
+            STYLE
+                COLOR 76 218 97
+                OPACITY 75
+                WIDTH 3.0
+            END # STYLE
+            LABEL
+                COLOR 76 218 97
+                OUTLINECOLOR 255 255 255
+                FONT "DejaVuSans"
+                TYPE truetype
+                SIZE 6
+                ANGLE FOLLOW
+                POSITION CC
+                PARTIALS FALSE
+                MAXSCALEDENOM 50000
+            END # LABEL
+        END # CLASS
+    END # LAYER
+
+    LAYER
+        NAME "line_7"
+        GROUP "lines"
+        DATA "../data/Stacione & Linjat Qytetese 2018/Linja_7"
+        ENCODING "LATIN1"
+        TYPE LINE
+        STATUS OFF
+        PROJECTION
+            "init=epsg:32634"
+        END
+        METADATA
+            "wms_title" "Line 7"
+            "wms_enable_request" "*"
+            "wms_include_items" "all"
+            "gml_include_items" "all"
+            "ows_geometries" "msGeometry"
+            "ows_mygeom_type" "line"
+        END
+        LABELITEM "DESCRIPTIO"
+        CLASS
+            STYLE
+                COLOR 65 97 153
+                OPACITY 75
+                WIDTH 3.0
+            END # STYLE
+            LABEL
+                COLOR 65 97 153
+                OUTLINECOLOR 255 255 255
+                FONT "DejaVuSans"
+                TYPE truetype
+                SIZE 6
+                ANGLE FOLLOW
+                POSITION CC
+                PARTIALS FALSE
+                MAXSCALEDENOM 50000
+            END # LABEL
+        END # CLASS
+    END # LAYER
+
+    LAYER
+        NAME "line_8"
+        GROUP "lines"
+        DATA "../data/Stacione & Linjat Qytetese 2018/Linja_8t"
+        ENCODING "LATIN1"
+        TYPE LINE
+        STATUS OFF
+        PROJECTION
+            "init=epsg:32634"
+        END
+        METADATA
+            "wms_title" "Line 8"
+            "wms_enable_request" "*"
+            "wms_include_items" "all"
+            "gml_include_items" "all"
+            "ows_geometries" "msGeometry"
+            "ows_mygeom_type" "line"
+        END
+        LABELITEM "DESCRIPTIO"
+        CLASS
+            STYLE
+                COLOR 135 155 115
+                OPACITY 75
+                WIDTH 3.0
+            END # STYLE
+            LABEL
+                COLOR 135 155 115
+                OUTLINECOLOR 255 255 255
+                FONT "DejaVuSans"
+                TYPE truetype
+                SIZE 6
+                ANGLE FOLLOW
+                POSITION CC
+                PARTIALS FALSE
+                MAXSCALEDENOM 50000
+            END # LABEL
+        END # CLASS
+    END # LAYER
+
+    LAYER
+        NAME "line_9"
+        GROUP "lines"
+        DATA "../data/Stacione & Linjat Qytetese 2018/Linja_9"
+        ENCODING "LATIN1"
+        TYPE LINE
+        STATUS OFF
+        PROJECTION
+            "init=epsg:32634"
+        END
+        METADATA
+            "wms_title" "Line 9"
+            "wms_enable_request" "*"
+            "wms_include_items" "all"
+            "gml_include_items" "all"
+            "ows_geometries" "msGeometry"
+            "ows_mygeom_type" "line"
+        END
+        LABELITEM "DESCRIPTIO"
+        CLASS
+            STYLE
+                COLOR 114 217 140
+                OPACITY 75
+                WIDTH 3.0
+            END # STYLE
+            LABEL
+                COLOR 114 217 140
+                OUTLINECOLOR 255 255 255
+                FONT "DejaVuSans"
+                TYPE truetype
+                SIZE 6
+                ANGLE FOLLOW
+                POSITION CC
+                PARTIALS FALSE
+                MAXSCALEDENOM 50000
+            END # LABEL
+        END # CLASS
+    END # LAYER
+
+    LAYER
+        NAME "line_10"
+        GROUP "lines"
+        DATA "../data/Stacione & Linjat Qytetese 2018/Linja_10"
+        ENCODING "LATIN1"
+        TYPE LINE
+        STATUS OFF
+        PROJECTION
+            "init=epsg:32634"
+        END
+        METADATA
+            "wms_title" "Line 10"
+            "wms_enable_request" "*"
+            "wms_include_items" "all"
+            "gml_include_items" "all"
+            "ows_geometries" "msGeometry"
+            "ows_mygeom_type" "line"
+        END
+        LABELITEM "DESCRIPTIO"
+        CLASS
+            STYLE
+                COLOR 64 83 252
+                OPACITY 75
+                WIDTH 3.0
+            END # STYLE
+            LABEL
+                COLOR 64 83 252
+                OUTLINECOLOR 255 255 255
+                FONT "DejaVuSans"
+                TYPE truetype
+                SIZE 6
+                ANGLE FOLLOW
+                POSITION CC
+                PARTIALS FALSE
+                MAXSCALEDENOM 50000
+            END # LABEL
+        END # CLASS
+    END # LAYER
+
+    LAYER
+        NAME "line_11"
+        GROUP "lines"
+        DATA "../data/Stacione & Linjat Qytetese 2018/Linja_11"
+        ENCODING "LATIN1"
+        TYPE LINE
+        STATUS OFF
+        PROJECTION
+            "init=epsg:32634"
+        END
+        METADATA
+            "wms_title" "Line 11"
+            "wms_enable_request" "*"
+            "wms_include_items" "all"
+            "gml_include_items" "all"
+            "ows_geometries" "msGeometry"
+            "ows_mygeom_type" "line"
+        END
+        LABELITEM "DESCRIPTIO"
+        CLASS
+            STYLE
+                COLOR 169 84 254
+                OPACITY 75
+                WIDTH 3.0
+            END # STYLE
+            LABEL
+                COLOR 169 84 254
+                OUTLINECOLOR 255 255 255
+                FONT "DejaVuSans"
+                TYPE truetype
+                SIZE 6
+                ANGLE FOLLOW
+                POSITION CC
+                PARTIALS FALSE
+                MAXSCALEDENOM 50000
+            END # LABEL
+        END # CLASS
+    END # LAYER
+
+    LAYER
+        NAME "line_12"
+        GROUP "lines"
+        DATA "../data/Stacione & Linjat Qytetese 2018/Linja_12"
+        ENCODING "LATIN1"
+        TYPE LINE
+        STATUS OFF
+        PROJECTION
+            "init=epsg:32634"
+        END
+        METADATA
+            "wms_title" "Line 12"
+            "wms_enable_request" "*"
+            "wms_include_items" "all"
+            "gml_include_items" "all"
+            "ows_geometries" "msGeometry"
+            "ows_mygeom_type" "line"
+        END
+        LABELITEM "DESCRIPTIO"
+        CLASS
+            STYLE
+                COLOR 66 199 59
+                OPACITY 75
+                WIDTH 3.0
+            END # STYLE
+            LABEL
+                COLOR 66 199 59
+                OUTLINECOLOR 255 255 255
+                FONT "DejaVuSans"
+                TYPE truetype
+                SIZE 6
+                ANGLE FOLLOW
+                POSITION CC
+                PARTIALS FALSE
+                MAXSCALEDENOM 50000
+            END # LABEL
+        END # CLASS
+    END # LAYER
+
+    LAYER
+        NAME "line_13"
+        GROUP "lines"
+        DATA "../data/Stacione & Linjat Qytetese 2018/Linja_13"
+        ENCODING "LATIN1"
+        TYPE LINE
+        STATUS OFF
+        PROJECTION
+            "init=epsg:32634"
+        END
+        METADATA
+            "wms_title" "Line 13"
+            "wms_enable_request" "*"
+            "wms_include_items" "all"
+            "gml_include_items" "all"
+            "ows_geometries" "msGeometry"
+            "ows_mygeom_type" "line"
+        END
+        LABELITEM "DESCRIPTIO"
+        CLASS
+            STYLE
+                COLOR 243 13 109
+                OPACITY 75
+                WIDTH 3.0
+            END # STYLE
+            LABEL
+                COLOR 243 13 109
+                OUTLINECOLOR 255 255 255
+                FONT "DejaVuSans"
+                TYPE truetype
+                SIZE 6
+                ANGLE FOLLOW
+                POSITION CC
+                PARTIALS FALSE
+                MAXSCALEDENOM 50000
+            END # LABEL
+        END # CLASS
+    END # LAYER
+
+    LAYER
+        NAME "line_14"
+        GROUP "lines"
+        DATA "../data/Stacione & Linjat Qytetese 2018/Linja_14"
+        ENCODING "LATIN1"
+        TYPE LINE
+        STATUS OFF
+        PROJECTION
+            "init=epsg:32634"
+        END
+        METADATA
+            "wms_title" "Line 14"
+            "wms_enable_request" "*"
+            "wms_include_items" "all"
+            "gml_include_items" "all"
+            "ows_geometries" "msGeometry"
+            "ows_mygeom_type" "line"
+        END
+        LABELITEM "DESCRIPTIO"
+        CLASS
+            STYLE
+                COLOR 31 83 213
+                OPACITY 75
+                WIDTH 3.0
+            END # STYLE
+            LABEL
+                COLOR 31 83 213
+                OUTLINECOLOR 255 255 255
+                FONT "DejaVuSans"
+                TYPE truetype
+                SIZE 6
+                ANGLE FOLLOW
+                POSITION CC
+                PARTIALS FALSE
+                MAXSCALEDENOM 50000
+            END # LABEL
+        END # CLASS
+    END # LAYER
+
+    LAYER
+        NAME "line_15"
+        GROUP "lines"
+        DATA "../data/Stacione & Linjat Qytetese 2018/Linja_15t"
+        ENCODING "LATIN1"
+        TYPE LINE
+        STATUS OFF
+        PROJECTION
+            "init=epsg:32634"
+        END
+        METADATA
+            "wms_title" "Line 15"
+            "wms_enable_request" "*"
+            "wms_include_items" "all"
+            "gml_include_items" "all"
+            "ows_geometries" "msGeometry"
+            "ows_mygeom_type" "line"
+        END
+        LABELITEM "DESCRIPTIO"
+        CLASS
+            STYLE
+                COLOR 161 7 71
+                OPACITY 75
+                WIDTH 3.0
+            END # STYLE
+            LABEL
+                COLOR 161 7 71
+                OUTLINECOLOR 255 255 255
+                FONT "DejaVuSans"
+                TYPE truetype
+                SIZE 6
+                ANGLE FOLLOW
+                POSITION CC
+                PARTIALS FALSE
+                MAXSCALEDENOM 50000
+            END # LABEL
+        END # CLASS
+    END # LAYER
+
+    LAYER
+        NAME "stops"
+        DATA "../data/Stacione & Linjat Qytetese 2018/Stacione_Bus"
+        TYPE POINT
+        STATUS OFF
+        PROJECTION
+            "init=epsg:32634"
+        END
+        METADATA
+            "wms_title" "Bus stops"
+            "wms_enable_request" "*"
+            "wms_include_items" "all"
+            "gml_include_items" "all"
+            "ows_geometries" "msGeometry"
+            "ows_mygeom_type" "point"
+        END
+        MAXSCALEDENOM 80000
+        LABELITEM "Stacioni"
+        CLASS
+            STYLE
+                COLOR 0 128 255
+                OUTLINECOLOR 0 0 0
+                SIZE 5.0
+                SYMBOL "circle"
+            END # STYLE
+            LABEL
+                COLOR 0 128 255
+                OUTLINECOLOR 255 255 255
+                FONT "DejaVuSans-Bold"
+                TYPE truetype
+                SIZE 5
+                POSITION AUTO
+                PARTIALS FALSE
+                MAXSCALEDENOM 20000
+            END # LABEL
+        END # CLASS
+        DUMP TRUE
+        TEMPLATE "dummy.html"
+    END # LAYER
