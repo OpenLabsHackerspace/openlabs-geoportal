@@ -79,6 +79,7 @@ It should display :
     
     sudo ln -s /usr/local/bin/mapserv /usr/lib/cgi-bin/mapserv
     sudo ln -s ~/openlabs-geoportal/mapserver/fonts.txt /usr/lib/cgi-bin/fonts.txt
+    sudo ln -s ~/openlabs-geoportal/mapserver/symbols.txt /usr/lib/cgi-bin/symbols.txt
     
     sudo cp ~/openlabs-geoportal/mapserver/mapserver.conf /etc/apache2/conf-available/mapserver.conf
     sudo a2enconf mapserver
