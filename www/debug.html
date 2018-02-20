@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Open Labs GeoPortal + Municipality of Tirana</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/openlayers/4.6.4/ol.css" integrity="sha256-rQq4Fxpq3LlPQ8yP11i6Z2lAo82b6ACDgd35CKyNEBw=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+    <style>
+      html,
+      body {
+        height: 100%;
+        width: 100%;
+      }
+      .container-fluid,
+      .row,
+      .col,
+      .map {
+        height: 100%;
+      }
+      .ol-attribution.ol-logo-only,
+      .ol-attribution.ol-uncollapsible {
+        max-width: calc(100% - 3em);
+        height: 1.5em;
+      }
+      .ol-control button, .ol-attribution, .ol-scale-line-inner {
+        font-family: 'Lucida Grande',Verdana,Geneva,Lucida,Arial,Helvetica,sans-serif;
+      }
+    </style>
+  </head>
+  <body>
+    <a href="https://github.com/OpenLabsHackerspace/openlabs-geoportal"><img style="position: absolute; top: 0; right: 0; border: 0; z-index: 99;" src="https://camo.githubusercontent.com/38ef81f8aca64bb9a64448d0d70f1308ef5341ab/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f6461726b626c75655f3132313632312e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png"></a>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col">
+          <div id="map-left" class="map"></div>
+        </div>
+        <div class="col">
+          <div id="map-right" class="map"></div>
+        </div>
+      </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/openlayers/4.6.4/ol.js" integrity="sha256-ZZT1txI5nKBm9GNPGc022qk5dTv9aZ7s3IdNKm9JAl4=" crossorigin="anonymous"></script>
+    <script>
+      var zoom = 13;
+      var center = [19.8156, 41.3314];
+
+      if (window.location.hash !== '') {
+        var hash = window.location.hash.replace('#map=', '');
+        var parts = hash.split('/');
+        if (parts.length === 3) {
+          zoom = parseInt(parts[0], 10);
+          center = [
+            parseFloat(parts[1]),
+            parseFloat(parts[2])
+          ];
+        }
+      }
+
+      var view = new ol.View({
+        center: ol.proj.fromLonLat(center),
+        zoom: zoom
+      })
+
+      var attributionLeft = new ol.control.Attribution({
+        collapsible: false
+      });
+      var attributionRight = new ol.control.Attribution({
+        collapsible: false
+      });
+      var scaleLineControlLeft = new ol.control.ScaleLine();
+      var scaleLineControlRight = new ol.control.ScaleLine();
+
+      var mapLeft = new ol.Map({
+        controls: ol.control.defaults({attribution: false}).extend([attributionLeft, scaleLineControlLeft]),
+        layers: [
+          new ol.layer.Tile({
+            source: new ol.source.OSM()
+          }),
+          new ol.layer.Tile({
+            source: new ol.source.TileDebug({
+              projection: 'EPSG:3857',
+              tileGrid: (new ol.source.OSM()).getTileGrid()
+            })
+          })
+        ],
+        target: 'map-left',
+        view: view
+      });
+      var mapRight = new ol.Map({
+        controls: ol.control.defaults({attribution: false}).extend([attributionRight, scaleLineControlRight]),
+        layers: [
+          new ol.layer.Tile({
+            source: new ol.source.TileWMS({
+              attributions: '© Municipality of Tirana',
+              params: {'LAYERS': 'streets_outside,streets,buildings,administrative_buildings,stops,lines'},
+              serverType: 'mapserver',
+              url: '/cgi-bin/mapserv?map=/home/ubuntu/openlabs-geoportal/mapserver/tirana-debug.map'
+            })
+          }),
+          new ol.layer.Tile({
+            source: new ol.source.TileDebug({
+              projection: 'EPSG:3857',
+              tileGrid: (new ol.source.OSM()).getTileGrid()
+            })
+          })
+        ],
+        target: 'map-right',
+        view: view
+      });
+
+      var shouldUpdate = true;
+      var view = mapLeft.getView();
+      var updatePermalink = function() {
+        if (!shouldUpdate) {
+          shouldUpdate = true;
+          return;
+        }
+
+        var center = ol.proj.toLonLat(view.getCenter());
+        var hash = '#map=' +
+            view.getZoom() + '/' +
+            Math.round(center[0] * 1000000) / 1000000 + '/' +
+            Math.round(center[1] * 1000000) / 1000000;
+        var state = {
+          zoom: view.getZoom(),
+          center: center
+        };
+        window.history.pushState(state, 'map', hash);
+      };
+
+      mapLeft.on('moveend', updatePermalink);
+      mapRight.on('moveend', updatePermalink);
+
+      window.addEventListener('popstate', function(event) {
+        if (event.state === null) {
+          return;
+        }
+        mapLeft.getView().setCenter(ol.proj.fromLonLat(event.state.center));
+        mapLeft.getView().setZoom(event.state.zoom);
+        mapRight.getView().setCenter(ol.proj.fromLonLat(event.state.center));
+        mapRight.getView().setZoom(event.state.zoom);
+        shouldUpdate = false;
+      });
+    </script>
+  </body>
+</html>
