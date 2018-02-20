@@ -4,8 +4,8 @@
     <title>Open Labs GeoPortal + Municipality of Tirana</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/openlayers/4.4.2/ol.css" integrity="sha256-rQq4Fxpq3LlPQ8yP11i6Z2lAo82b6ACDgd35CKyNEBw=" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/openlayers/4.6.4/ol.css" integrity="sha256-rQq4Fxpq3LlPQ8yP11i6Z2lAo82b6ACDgd35CKyNEBw=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <style>
       #map-left,
       #map-right {
@@ -23,8 +23,17 @@
   </head>
   <body>
     <a href="https://github.com/OpenLabsHackerspace/openlabs-geoportal"><img style="position: absolute; top: 0; right: 0; border: 0; z-index: 99;" src="https://camo.githubusercontent.com/38ef81f8aca64bb9a64448d0d70f1308ef5341ab/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f6461726b626c75655f3132313632312e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png"></a>
-    <div class="container-fluid">
+    <div class="container">
       <h1>Open Labs GeoPortal</h1>
+      <p>
+        Municipality of Tirana, the biggest municipality in Albania, has agreed to donate geospatial data to OpenStreetMap using an <a href="https://opendatacommons.org/licenses/odbl/" target="_blank">open license</a>.
+        After several communications with local and international OpenStreetMap contributors and following the memorandum of understanding signed in 2017 between the <a href="http://www.tirana.al/" target="_blank">Municipality of Tirana</a> and Open Labs hackerspace, the donated data have already started being added at OSM through <a href="https://geoportal.openlabs.cc/">geoportal.openlabs.cc</a>.
+        The available data include, but are not limited to, buildings, height of buildings, roads and their names and will help the Albanian open source community contribute even more to the OpenStreetMap platform.<br>
+      </p>
+      <p>Read our blogpost : <a href="https://openlabs.cc/en/announcing-the-openstreetmap-based-geoportal-for-albania/" target="_blank" style="font-style: italic;">Announcing the OpenStreetMap based Geoportal for Albania</a></p>
+      <p>
+        Thank you to the <a href="http://www.tirana.al/" target="_blank">Municipality of Tirana</a>, and the <a href="http://www.openstreetmap.org/" target="_blank">OpenStreetMap community</a> !
+      </p>
       <div class="row">
         <div class="col-md">
           <h2>OpenStreetMap</h2>
@@ -35,8 +44,13 @@
           <div id="map-right"></div>
         </div>
       </div>
+      <hr>
+      <p class="text-secondary small">
+        Developed by <a href="https://github.com/jbelien/" target="_blank">Jonathan Beliën</a>, <a href="https://openlabs.cc/" target="_blank">Open Labs</a> member and <a href="http://osm.be/" target="_blank">OpenStreetMap Belgium</a> board member.<br>
+        All the "source code" is available on GitHub : <a href="https://github.com/OpenLabsHackerspace/openlabs-geoportal" target="_blank">https://github.com/OpenLabsHackerspace/openlabs-geoportal</a>
+      </p>
     </div>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/openlayers/4.4.2/ol.js" integrity="sha256-hq+a1sWxTrC7b+EcVjl5jjzblmb49Ups88E7KhTuGEU=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/openlayers/4.6.4/ol.js" integrity="sha256-ZZT1txI5nKBm9GNPGc022qk5dTv9aZ7s3IdNKm9JAl4=" crossorigin="anonymous"></script>
     <script>
       var zoom = 13;
       var center = [19.8156, 41.3314];
@@ -81,11 +95,6 @@
         controls: ol.control.defaults({attribution: false}).extend([attributionRight, scaleLineControlRight]),
         layers: [
           new ol.layer.Tile({
-            /*source: new ol.source.TileWMS({
-              url: 'http://149.202.183.195/cgi-bin/mapserv?map=/home/ubuntu/openlabs-geoportal/mapserver/tirana.map',
-              params: {'LAYERS': 'streets,buildings'},
-              serverType: 'mapserver'
-            })*/
             source: new ol.source.XYZ({
               attributions: '© Municipality of Tirana',
               url: '/mapcache/tms/1.0.0/tirana@GoogleMapsCompatibleExtended/{z}/{x}/{-y}.png'
