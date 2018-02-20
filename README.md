@@ -4,7 +4,7 @@ This GeoPortal displays the data from the Municipality of Tirana.
 
 ## Data
 
-All the data come from the Municipality of Tirana !
+**All the data come from the Municipality of Tirana !**
 
 - Ndertesa (2017) (*buildings*)  
 - Rruge Akse Tirana (2017-01-31) (*streets*)  
