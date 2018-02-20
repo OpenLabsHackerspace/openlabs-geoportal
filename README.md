@@ -4,8 +4,11 @@ This GeoPortal displays the data from the Municipality of Tirana.
 
 ## Data
 
-- Ndertesa (2017) (*buildings*)
-- Rruge Akse Tirana (2017-01-31) (*streets*)
+All the data come from the Municipality of Tirana !
+
+- Ndertesa (2017) (*buildings*)  
+- Rruge Akse Tirana (2017-01-31) (*streets*)  
+- Rruge Akse ExKomuna  
 - Stacione & Linjat Qytetese 2018 (*public transport: stations + lines*)  
 :octocat: Source: [bashkiatirane/Harta-e-Transportit-Publik](https://github.com/bashkiatirane/Harta-e-Transportit-Publik/tree/master/Stacione%20%26%20Linjat%20Qytetese%202018)
 
