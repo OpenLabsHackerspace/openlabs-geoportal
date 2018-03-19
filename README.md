@@ -40,8 +40,8 @@ See [INSTALL.md](INSTALL.md)
 
 The layer is available in the default "Imagery preferences" as :
 
-- [*Municipality of Tirana (Open Labs GeoPortal)*](https://josm.openstreetmap.de/wiki/Maps/Albania)
-- [*Municipality of Tirana - Public Transport (Open Labs GeoPortal) (overlay)*](https://josm.openstreetmap.de/wiki/Maps/Albania)
+- [*Municipality of Tirana (Open Labs GeoPortal)*](https://josm.openstreetmap.de/wiki/Maps/Albania#MunicipalityofTiranaOpenLabsGeoPortal)
+- [*Municipality of Tirana - Public Transport (Open Labs GeoPortal) (overlay)*](https://josm.openstreetmap.de/wiki/Maps/Albania#MunicipalityofTirana-PublicTransportOpenLabsGeoPortaloverlay)
 
 More information on how to enable it : <https://josm.openstreetmap.de/wiki/Help/Preferences/Imagery> !
 
