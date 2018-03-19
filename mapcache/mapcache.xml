@@ -10,7 +10,7 @@
     <symlink_blank/>
   </cache>
   <cache name="sqlite" type="sqlite3">
-    <dbfile>/home/ubuntu/openlabs-geoportal/mapcache/cache/{tileset}-{z}-{grid}.db</dbfile>
+    <dbfile>/home/ubuntu/openlabs-geoportal/mapcache/cache/{tileset}/{grid}/{z}.db</dbfile>
     <detect_blank/>
   </cache>
 
@@ -36,6 +36,28 @@
     </http>
   </source>
 
+  <source name="public-transport" type="wms">
+    <getmap>
+      <params>
+        <MAP>/home/ubuntu/openlabs-geoportal/mapserver/tirana.map</MAP>
+        <FORMAT>image/png</FORMAT>
+        <LAYERS>stops,lines</LAYERS>
+        <TRANSPARENT>true</TRANSPARENT>
+      </params>
+    </getmap>
+
+    <getfeatureinfo>
+      <info_formats>text/plain,application/vnd.ogc.gml</info_formats>
+      <params>
+        <QUERY_LAYERS>stops,lines</QUERY_LAYERS>
+      </params>
+    </getfeatureinfo>
+
+    <http>
+      <url>http://localhost/cgi-bin/mapserv</url>
+    </http>
+  </source>
+
   <tileset name="tirana">
     <source>tirana</source>
     <cache>sqlite</cache>
@@ -48,6 +70,21 @@
     <expires>3600</expires>
     <metadata>
       <title>Municipality of Tirana</title>
+    </metadata>
+  </tileset>
+
+  <tileset name="public-transport">
+    <source>public-transport</source>
+    <cache>sqlite</cache>
+    <grid>WGS84</grid>
+    <grid>GoogleMapsCompatible</grid>
+    <grid>GoogleMapsCompatibleExtended</grid>
+    <format>PNG</format>
+    <metatile>5 5</metatile>
+    <metabuffer>10</metabuffer>
+    <expires>3600</expires>
+    <metadata>
+      <title>Municipality of Tirana (Public Transport)</title>
     </metadata>
   </tileset>
 
