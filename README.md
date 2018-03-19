@@ -23,14 +23,6 @@ See [INSTALL.md](INSTALL.md)
 
 ## Usage
 
-### QGIS
-
-<https://qgis.org/>
-
-| Type | URL |
-|------|-----|
-| WMS  | `https://geoportal.openlabs.cc/mapcache/` |
-
 ### iD Editor
 
 <https://www.openstreetmap.org/edit?editor=id>
@@ -40,14 +32,31 @@ See [INSTALL.md](INSTALL.md)
 - Paste `https://geoportal.openlabs.cc/mapcache/tms/1.0.0/tirana@GoogleMapsCompatibleExtended/{z}/{x}/{-y}.png`    
 - Click on OK
 
+**Update March 2018: This layer will be soon available in iD default settings !**
+
 ### JOSM
 
 <https://josm.openstreetmap.de/>
 
-The layer is available in the default "Imagery preferences" as "[*Municipality of Tirana (Open Labs GeoPortal)*](https://josm.openstreetmap.de/wiki/Maps/Albania)" !  
+The layer is available in the default "Imagery preferences" as :
+
+- [*Municipality of Tirana (Open Labs GeoPortal)*](https://josm.openstreetmap.de/wiki/Maps/Albania)
+- [*Municipality of Tirana - Public Transport (Open Labs GeoPortal) (overlay)*](https://josm.openstreetmap.de/wiki/Maps/Albania)
+
 More information on how to enable it : <https://josm.openstreetmap.de/wiki/Help/Preferences/Imagery> !
 
-| Type | URL                                                                                             |
-|------|-------------------------------------------------------------------------------------------------|
-| WMS  | `https://geoportal.openlabs.cc/mapcache/`                                                       |
-| TMS  | `https://geoportal.openlabs.cc/mapcache/tms/1.0.0/tirana@GoogleMapsCompatibleExtended/{z}/{x}/{-y}.png` |
+| Type | URL |
+|------|-----|
+| WMS | `https://geoportal.openlabs.cc/mapcache/` |
+| TMS - Full  | `https://geoportal.openlabs.cc/mapcache/tms/1.0.0/tirana@GoogleMapsCompatibleExtended/{z}/{x}/{-y}.png` |
+| TMS - Public Transport | `https://geoportal.openlabs.cc/mapcache/tms/1.0.0/public-transport@GoogleMapsCompatibleExtended/{z}/{x}/{-y}.png` |
+
+### QGIS
+
+<https://qgis.org/>
+
+| Type | URL |
+|------|-----|
+| WMS | `https://geoportal.openlabs.cc/mapcache/` |
+| TMS - Full  | `https://geoportal.openlabs.cc/mapcache/tms/1.0.0/tirana@GoogleMapsCompatibleExtended/{z}/{x}/{-y}.png` |
+| TMS - Public Transport | `https://geoportal.openlabs.cc/mapcache/tms/1.0.0/public-transport@GoogleMapsCompatibleExtended/{z}/{x}/{-y}.png` |
