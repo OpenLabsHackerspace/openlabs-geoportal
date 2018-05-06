@@ -28,11 +28,7 @@ See [INSTALL.md](INSTALL.md)
 <https://www.openstreetmap.org/edit?editor=id>
 
 - Open *Background Settings* (shortcut: `B`)
-- Click on *Custom*
-- Paste `https://geoportal.openlabs.cc/mapcache/tms/1.0.0/tirana@GoogleMapsCompatibleExtended/{z}/{x}/{-y}.png`    
-- Click on OK
-
-**Update March 2018: This layer will be soon available in iD default settings !**
+- Choose "Municipality of Tirana (Open Labs GeoPortal)"
 
 ### JOSM
 
