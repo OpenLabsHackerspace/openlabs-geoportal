@@ -27,6 +27,8 @@ See [INSTALL.md](INSTALL.md)
 
 <https://www.openstreetmap.org/edit?editor=id>
 
+The layer is available in the default "Background Settings" :
+
 - Open *Background Settings* (shortcut: `B`)
 - Choose "Municipality of Tirana (Open Labs GeoPortal)"
 
